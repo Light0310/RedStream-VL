@@ -1,0 +1,6 @@
+{
+  "name": "RedStream IPTV",
+  "description": "Premium IPTV subscription with fast, stable servers, 4K/Full HD quality, and 24/7 support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

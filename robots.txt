@@ -1,0 +1,7 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Allow: /assets/
+
+# Sitemap Location
+Sitemap: https://redstream-iptv.com/sitemap.xml
