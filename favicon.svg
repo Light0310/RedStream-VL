@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <!-- RedStream Logo Favicon -->
+  <g transform="translate(16, 16) scale(0.93)">
+    <!-- Main Red Stylized 'R' Structure -->
+    <path d="M 120 140 
+             L 340 140 
+             A 75 75 0 0 1 415 215 
+             A 75 75 0 0 1 340 290 
+             L 280 290 
+             L 400 380 
+             L 330 380 
+             L 225 300 
+             L 150 380 
+             L 105 380 
+             L 205 300 
+             L 245 250 
+             L 340 250 
+             A 35 35 0 0 0 375 215 
+             A 35 35 0 0 0 340 180 
+             L 160 180 
+             Z" 
+          fill="#FF1E27" />
+          
+    <!-- White Play Button Triangle in Left Negative Space -->
+    <polygon points="120,200 200,245 120,290" fill="#FFFFFF" />
+  </g>
+</svg>

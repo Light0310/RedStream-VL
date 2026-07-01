@@ -34,6 +34,59 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
+  <script>
+    // Global movie poster fallback system with fast, premium TMDB CDN backups
+    window.fallbackImages = {
+      "1000148196": "https://image.tmdb.org/t/p/w500/8G7P8WM9CzxYfccSuyh3gQxPrt4.jpg", // Aquaman and the Lost Kingdom
+      "1000148209": "https://image.tmdb.org/t/p/w500/pB8BM7pdSpqUqThVnIuKq5tC8Z1.jpg", // Fight Club
+      "1000148210": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m73k4CRPSs.jpg", // The Dark Knight
+      "1000148211": "https://image.tmdb.org/t/p/w500/q6y0ubxQJ0lcoDpsfcwRQJstYcK.jpg", // The Shawshank Redemption
+      "1000148212": "https://image.tmdb.org/t/p/w500/udDDUFG2MkdO0LgA6FdeKFWPzCq.jpg", // Joker
+      "1000148213": "https://image.tmdb.org/t/p/w500/k3NVbEaB1RjR8q4e11n1iXU4n7w.jpg", // Past Lives
+      "1000148214": "https://image.tmdb.org/t/p/w500/3xnWKxveb9L7jR9s7xT6e5J0L0e.jpg", // Breaking Bad
+      "1000148215": "https://image.tmdb.org/t/p/w500/5kQ7t09g3N4383v298j4M9k9t7Q.jpg", // Alien: Romulus
+      "1000148216": "https://image.tmdb.org/t/p/w500/sMch0P9p0F74y4623RkK3Vn1w9m.jpg", // Damsel
+      "1000148217": "https://image.tmdb.org/t/p/w500/bXi6IQiQDhdqW0mxHFzsdFpY8on.jpg", // Road House
+      "1000148218": "https://image.tmdb.org/t/p/w500/hgyYjA77P7l9KzHwzP29P6bN3w.jpg", // Ghostbusters: Frozen Empire
+      "1000148219": "https://image.tmdb.org/t/p/w500/g0BblO5X35x5A13yJ1s2e50S7zW.jpg", // Shogun
+      "1000148220": "https://image.tmdb.org/t/p/w500/d5NXSklXo0Rx02Acs9OvgY2iQKF.jpg", // Dune
+      "1000148221": "https://image.tmdb.org/t/p/w500/xWj0nC2E4M6I5qBsdvJ4y0eUuK5.jpg", // The Gentlemen
+      "1000148222": "https://image.tmdb.org/t/p/w500/k53oXF8CgT3Iq533mt4E4B7K7sT.jpg", // 3 Body Problem
+      "1000148223": "https://image.tmdb.org/t/p/w500/kYgQzzjNek3DMbXFGMTMBLC26RT.jpg", // Poor Things
+      "1000148224": "https://image.tmdb.org/t/p/w500/uyO9WjYn4yR1vD1Tj1uX6xL5t2t.jpg", // Dune: Part Two
+      "1000148225": "https://image.tmdb.org/t/p/w500/bSg04d80b4j5L4yN69bT7tP6S6f.jpg", // Masters of the Air
+      "1000148226": "https://image.tmdb.org/t/p/w500/jE89F0E17u9V4n7NfQy8jQYjK2Y.jpg", // Shaitaan
+      "1000148227": "https://image.tmdb.org/t/p/w500/xNl9c6rQc9V5d8n2Xk559c5hX7G.jpg", // Avatar: The Last Airbender
+      "1000148228": "https://image.tmdb.org/t/p/w500/nIyt10T4eIuEtytBv2W4iV5R0nC.jpg", // The Holdovers
+      "1000148229": "https://image.tmdb.org/t/p/w500/j2oIq6J6vWnB12QYmXq5R1qg9L8.jpg", // 20 Days in Mariupol
+      "1000148230": "https://image.tmdb.org/t/p/w500/cv6K4xP7x0s5eD21U6T8t7r4p1A.jpg", // Killers of the Flower Moon
+      "1000148231": "https://image.tmdb.org/t/p/w500/pYlR0oU9oJk4k0c8h4P0K2Lw11f.jpg", // Society of the Snow
+      "1000148232": "https://image.tmdb.org/t/p/w500/oYuLB5LTliHjP592kR07ZKE0F2q.jpg", // Inception
+      "1000148233": "https://image.tmdb.org/t/p/w500/qZH6k4b16zR2V36L64c5Gv5kQ7t.jpg"  // Saltburn
+    };
+
+    window.handleMovieImageError = function(img) {
+      if (img.getAttribute('data-fallback-tried') === 'true') {
+        img.src = "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=500&q=80";
+        img.classList.add('loaded');
+        return;
+      }
+      img.setAttribute('data-fallback-tried', 'true');
+      const src = img.getAttribute('src') || '';
+      const match = src.match(/1000148(\d+)/);
+      if (match) {
+        const id = "1000148" + match[1];
+        if (window.fallbackImages && window.fallbackImages[id]) {
+          img.src = window.fallbackImages[id];
+          img.classList.add('loaded');
+          return;
+        }
+      }
+      img.src = "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=500&q=80";
+      img.classList.add('loaded');
+    };
+  </script>
+
   <!-- Advanced Schema Markup (JSON-LD) -->
   
   <!-- 1. Product Schema -->
@@ -2586,56 +2639,6 @@
 
   <!-- Simple Interaction Logic (Vanilla JS) -->
   <script>
-    // Global movie poster fallback system with fast, premium TMDB CDN backups
-    const fallbackImages = {
-      "1000148196": "https://image.tmdb.org/t/p/w500/8xV4a82Tq71H2oD7z8l2k4wD9Qe.jpg", // Aquaman and the Lost Kingdom
-      "1000148209": "https://image.tmdb.org/t/p/w500/pB8BM7pdSpqUqThVnIuKq5tC8Z1.jpg", // Fight Club
-      "1000148210": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haZ08s0H.jpg", // The Dark Knight
-      "1000148211": "https://image.tmdb.org/t/p/w500/lyzSPr97v76Z7fU37ux7OgA706K.jpg", // The Shawshank Redemption
-      "1000148212": "https://image.tmdb.org/t/p/w500/udDclJoHjfjb8Ekgsd4FDteZCEF.jpg", // Joker
-      "1000148213": "https://image.tmdb.org/t/p/w500/kboH8GqD77s2aE87rM5O0Q7hV8.jpg", // Past Lives
-      "1000148214": "https://image.tmdb.org/t/p/w500/ggFHVv2ueLoHn7T6sWcTqgK4z2n.jpg", // Breaking Bad
-      "1000148215": "https://image.tmdb.org/t/p/w500/b33nnKl1GSFbao4l3fZDDqsMx0F.jpg", // Alien: Romulus
-      "1000148216": "https://image.tmdb.org/t/p/w500/AgHbH013c7a13pS8W0gG2K23tP2.jpg", // Damsel
-      "1000148217": "https://image.tmdb.org/t/p/w500/bXi6Sw1S7W1Xm06e6M0l7wM9Z1m.jpg", // Road House
-      "1000148218": "https://image.tmdb.org/t/p/w500/e1J2oNIhP3o7T7b9l4v3r7G8lG9.jpg", // Ghostbusters: Frozen Empire
-      "1000148219": "https://image.tmdb.org/t/p/w500/7O4iV3V3v66TqjT5e9Y5K5X5p5p.jpg", // Shogun
-      "1000148220": "https://image.tmdb.org/t/p/w500/d5NXSklcJy8qyMYKKH6o25nNf6D.jpg", // Dune
-      "1000148221": "https://image.tmdb.org/t/p/w500/jxdw28xy1yvQJ58Yg1p41B7R7p6.jpg", // The Gentlemen
-      "1000148222": "https://image.tmdb.org/t/p/w500/23i9h1SjTq36p0659z5z1z5z1z5.jpg", // 3 Body Problem
-      "1000148223": "https://image.tmdb.org/t/p/w500/kAIb3p21n7YvGg86pXkH6E5q5p5.jpg", // Poor Things
-      "1000148224": "https://image.tmdb.org/t/p/w500/1pdfLvkEdH6H6XqXfD19yN9L9n9.jpg", // Dune: Part Two
-      "1000148225": "https://image.tmdb.org/t/p/w500/q8s2X9m3p7p7p7p7p7p7p7p7p7p7p.jpg", // Masters of the Air
-      "1000148226": "https://image.tmdb.org/t/p/w500/s23o243t456y78u9i0o1p2a3s4d.jpg", // Shaitaan
-      "1000148227": "https://image.tmdb.org/t/p/w500/x7w8w9w0w1w2w3w4w5w6w7w8w9w.jpg", // Avatar: The Last Airbender
-      "1000148228": "https://image.tmdb.org/t/p/w500/bx7onZ9b5PFF7wF8a7W1b6T5Fj5.jpg", // The Holdovers
-      "1000148229": "https://image.tmdb.org/t/p/w500/w8z9x0y1z2a3b4c5d6e7f8g9h0i.jpg", // 20 Days in Mariupol
-      "1000148230": "https://image.tmdb.org/t/p/w500/7k514y6l5l5l5l5l5l5l5l5l5l5.jpg", // Killers of the Flower Moon
-      "1000148231": "https://image.tmdb.org/t/p/w500/bkZ2Yv96T16o0659z5z1z5z1z5z.jpg", // Society of the Snow
-      "1000148232": "https://image.tmdb.org/t/p/w500/oYuLEt3zinnKq5tC8Z1.jpg", // Inception
-      "1000148233": "https://image.tmdb.org/t/p/w500/qktF8v3o8323m0659z5z1z5z1z5.jpg"  // Saltburn
-    };
-
-    window.handleMovieImageError = function(img) {
-      if (img.getAttribute('data-fallback-tried') === 'true') {
-        img.parentElement.classList.add('broken');
-        img.style.opacity = '0';
-        return;
-      }
-      img.setAttribute('data-fallback-tried', 'true');
-      const src = img.getAttribute('src') || '';
-      const match = src.match(/1000148(\d+)/);
-      if (match) {
-        const id = "1000148" + match[1];
-        if (fallbackImages[id]) {
-          img.src = fallbackImages[id];
-          return;
-        }
-      }
-      img.parentElement.classList.add('broken');
-      img.style.opacity = '0';
-    };
-
     // Mobile Navigation Drawer Toggle
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const navMenu = document.getElementById('nav-menu');
@@ -2670,6 +2673,25 @@
     // --- NEW: Advanced WhatsApp Dynamic URL Parameter & Campaign tracking integration ---
     document.addEventListener('DOMContentLoaded', () => {
       try {
+        // --- Robust Image Load Checking for Showcase Slider ---
+        try {
+          const showcaseImgs = document.querySelectorAll('.showcase-slide img');
+          showcaseImgs.forEach(img => {
+            if (img.complete) {
+              img.classList.add('loaded');
+            } else {
+              img.addEventListener('load', () => {
+                img.classList.add('loaded');
+              });
+              img.addEventListener('error', () => {
+                window.handleMovieImageError(img);
+              });
+            }
+          });
+        } catch (imgLoadErr) {
+          console.error('[Image Setup] Error setting up image state checkers:', imgLoadErr);
+        }
+
         // Dynamic SEO & Production Domain Sync at load time
         try {
           const currentOrigin = window.location.origin;
