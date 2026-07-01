@@ -34,58 +34,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <script>
-    // Global movie poster fallback system with fast, premium TMDB CDN backups
-    window.fallbackImages = {
-      "1000148196": "https://image.tmdb.org/t/p/w500/8G7P8WM9CzxYfccSuyh3gQxPrt4.jpg", // Aquaman and the Lost Kingdom
-      "1000148209": "https://image.tmdb.org/t/p/w500/pB8BM7pdSpqUqThVnIuKq5tC8Z1.jpg", // Fight Club
-      "1000148210": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m73k4CRPSs.jpg", // The Dark Knight
-      "1000148211": "https://image.tmdb.org/t/p/w500/q6y0ubxQJ0lcoDpsfcwRQJstYcK.jpg", // The Shawshank Redemption
-      "1000148212": "https://image.tmdb.org/t/p/w500/udDDUFG2MkdO0LgA6FdeKFWPzCq.jpg", // Joker
-      "1000148213": "https://image.tmdb.org/t/p/w500/k3NVbEaB1RjR8q4e11n1iXU4n7w.jpg", // Past Lives
-      "1000148214": "https://image.tmdb.org/t/p/w500/3xnWKxveb9L7jR9s7xT6e5J0L0e.jpg", // Breaking Bad
-      "1000148215": "https://image.tmdb.org/t/p/w500/5kQ7t09g3N4383v298j4M9k9t7Q.jpg", // Alien: Romulus
-      "1000148216": "https://image.tmdb.org/t/p/w500/sMch0P9p0F74y4623RkK3Vn1w9m.jpg", // Damsel
-      "1000148217": "https://image.tmdb.org/t/p/w500/bXi6IQiQDhdqW0mxHFzsdFpY8on.jpg", // Road House
-      "1000148218": "https://image.tmdb.org/t/p/w500/hgyYjA77P7l9KzHwzP29P6bN3w.jpg", // Ghostbusters: Frozen Empire
-      "1000148219": "https://image.tmdb.org/t/p/w500/g0BblO5X35x5A13yJ1s2e50S7zW.jpg", // Shogun
-      "1000148220": "https://image.tmdb.org/t/p/w500/d5NXSklXo0Rx02Acs9OvgY2iQKF.jpg", // Dune
-      "1000148221": "https://image.tmdb.org/t/p/w500/xWj0nC2E4M6I5qBsdvJ4y0eUuK5.jpg", // The Gentlemen
-      "1000148222": "https://image.tmdb.org/t/p/w500/k53oXF8CgT3Iq533mt4E4B7K7sT.jpg", // 3 Body Problem
-      "1000148223": "https://image.tmdb.org/t/p/w500/kYgQzzjNek3DMbXFGMTMBLC26RT.jpg", // Poor Things
-      "1000148224": "https://image.tmdb.org/t/p/w500/uyO9WjYn4yR1vD1Tj1uX6xL5t2t.jpg", // Dune: Part Two
-      "1000148225": "https://image.tmdb.org/t/p/w500/bSg04d80b4j5L4yN69bT7tP6S6f.jpg", // Masters of the Air
-      "1000148226": "https://image.tmdb.org/t/p/w500/jE89F0E17u9V4n7NfQy8jQYjK2Y.jpg", // Shaitaan
-      "1000148227": "https://image.tmdb.org/t/p/w500/xNl9c6rQc9V5d8n2Xk559c5hX7G.jpg", // Avatar: The Last Airbender
-      "1000148228": "https://image.tmdb.org/t/p/w500/nIyt10T4eIuEtytBv2W4iV5R0nC.jpg", // The Holdovers
-      "1000148229": "https://image.tmdb.org/t/p/w500/j2oIq6J6vWnB12QYmXq5R1qg9L8.jpg", // 20 Days in Mariupol
-      "1000148230": "https://image.tmdb.org/t/p/w500/cv6K4xP7x0s5eD21U6T8t7r4p1A.jpg", // Killers of the Flower Moon
-      "1000148231": "https://image.tmdb.org/t/p/w500/pYlR0oU9oJk4k0c8h4P0K2Lw11f.jpg", // Society of the Snow
-      "1000148232": "https://image.tmdb.org/t/p/w500/oYuLB5LTliHjP592kR07ZKE0F2q.jpg", // Inception
-      "1000148233": "https://image.tmdb.org/t/p/w500/qZH6k4b16zR2V36L64c5Gv5kQ7t.jpg"  // Saltburn
-    };
 
-    window.handleMovieImageError = function(img) {
-      if (img.getAttribute('data-fallback-tried') === 'true') {
-        img.src = "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=500&q=80";
-        img.classList.add('loaded');
-        return;
-      }
-      img.setAttribute('data-fallback-tried', 'true');
-      const src = img.getAttribute('src') || '';
-      const match = src.match(/1000148(\d+)/);
-      if (match) {
-        const id = "1000148" + match[1];
-        if (window.fallbackImages && window.fallbackImages[id]) {
-          img.src = window.fallbackImages[id];
-          img.classList.add('loaded');
-          return;
-        }
-      }
-      img.src = "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=500&q=80";
-      img.classList.add('loaded');
-    };
-  </script>
 
   <!-- Advanced Schema Markup (JSON-LD) -->
   
@@ -1469,7 +1418,7 @@
 
     /* Trending Entertainment Showcase Styling */
     .showcase-section {
-      padding: 80px 0;
+      padding: 60px 0;
       background: linear-gradient(180deg, #121212 0%, #0a0a0a 100%);
       border-top: 1px solid rgba(255, 255, 255, 0.05);
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -1477,7 +1426,7 @@
     }
     .showcase-section .section-header {
       text-align: center;
-      margin-bottom: 45px;
+      margin-bottom: 35px;
     }
     .showcase-section .section-header h2 {
       font-family: var(--font-sans, sans-serif);
@@ -1507,41 +1456,30 @@
     .showcase-track {
       display: flex;
       gap: 20px;
-      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none;  /* IE and Edge */
+      scroll-behavior: smooth;
+      padding: 10px 0;
+    }
+    .showcase-track::-webkit-scrollbar {
+      display: none; /* Chrome, Safari and Opera */
     }
     .showcase-slide {
-      flex: 0 0 calc(25% - 15px);
+      flex: 0 0 calc(25% - 15px); /* 4 items on desktop */
+      scroll-snap-align: start;
       border-radius: 12px;
       overflow: hidden;
       position: relative;
       border: 1.5px solid rgba(255, 255, 255, 0.05);
       background: linear-gradient(135deg, #1f1f1f 0%, #0d0d0d 100%);
       aspect-ratio: 2/3;
-      min-height: 220px;
       transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.4s ease, box-shadow 0.4s ease;
       cursor: pointer;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-    }
-    /* Centered Elegant Cinema Film Roll Placeholder Icon */
-    .showcase-slide::before {
-      content: '🎬';
-      position: absolute;
-      top: 45%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 2.2rem;
-      opacity: 0.25;
-      z-index: 1;
-      transition: opacity 0.3s ease;
-    }
-    .showcase-slide:hover::before {
-      opacity: 0.4;
-    }
-    .showcase-slide.broken::before {
-      content: '🍿';
-      opacity: 0.4;
     }
     .showcase-slide img {
       position: absolute;
@@ -1550,21 +1488,18 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      aspect-ratio: 2/3;
       z-index: 2;
-      transition: transform 0.6s ease, opacity 0.4s ease;
-      opacity: 0;
-    }
-    .showcase-slide img.loaded {
-      opacity: 1;
+      transition: transform 0.6s ease;
     }
     .showcase-slide:hover {
-      transform: scale(1.06) translateY(-5px);
+      transform: scale(1.04) translateY(-5px);
       border-color: #e50914;
       box-shadow: 0 12px 30px rgba(229, 9, 20, 0.4), 0 0 15px rgba(229, 9, 20, 0.2);
       z-index: 5;
     }
     .showcase-slide:hover img {
-      transform: scale(1.08);
+      transform: scale(1.06);
     }
     .showcase-badge {
       position: absolute;
@@ -1579,21 +1514,21 @@
       border-radius: 4px;
       letter-spacing: 0.05em;
       box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-      z-index: 2;
+      z-index: 3;
     }
     .showcase-overlay {
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
-      background: linear-gradient(360deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+      background: linear-gradient(360deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
       padding: 20px 15px 15px;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       opacity: 0;
       transition: opacity 0.3s ease;
-      z-index: 3;
+      z-index: 4;
     }
     .showcase-slide:hover .showcase-overlay {
       opacity: 1;
@@ -1613,7 +1548,7 @@
       align-items: center;
     }
     .showcase-quality {
-      background: rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.15);
       padding: 2px 6px;
       border-radius: 3px;
       font-size: 0.65rem;
@@ -1655,11 +1590,11 @@
       display: flex;
       justify-content: center;
       gap: 8px;
-      margin-top: 30px;
+      margin-top: 25px;
     }
     .showcase-dot {
-      width: 10px;
-      height: 10px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       background: rgba(255, 255, 255, 0.2);
       cursor: pointer;
@@ -1670,13 +1605,13 @@
     }
     .showcase-dot.active {
       background: #e50914;
-      width: 24px;
-      border-radius: 5px;
+      width: 20px;
+      border-radius: 4px;
       box-shadow: 0 0 8px rgba(229, 9, 20, 0.5);
     }
     @media (max-width: 1024px) {
       .showcase-slide {
-        flex: 0 0 calc(33.333% - 13.33px);
+        flex: 0 0 calc(33.333% - 13.33px); /* 3 items on tablet */
       }
       .showcase-slider-wrapper {
         padding: 0 40px;
@@ -1684,7 +1619,7 @@
     }
     @media (max-width: 768px) {
       .showcase-slide {
-        flex: 0 0 calc(50% - 10px);
+        flex: 0 0 calc(50% - 10px); /* 2 items on mobile landscape */
       }
       .showcase-slider-wrapper {
         padding: 0 30px;
@@ -1697,15 +1632,17 @@
     }
     @media (max-width: 480px) {
       .showcase-slide {
-        flex: 0 0 100%;
+        flex: 0 0 75%; /* Partial next item visible on mobile portrait */
       }
       .showcase-slider-wrapper {
         padding: 0 10px;
       }
       .showcase-arrow {
-        display: none;
+        display: none; /* Hide arrows on small mobile */
       }
     }
+
+
   </style>
 </head>
 <body>
@@ -1901,7 +1838,7 @@
     <div class="container">
       <div class="section-header">
         <h2>Trending Entertainment Showcase</h2>
-        <p>Explore a taste of our massive library, including blockbuster films, popular TV shows, and premium live broadcasts, all streamable on any device.</p>
+        <p>Explore a taste of our massive library, including blockbuster movies, popular TV shows, and premium live broadcasts, all streamable on any device.</p>
       </div>
 
       <div class="showcase-slider-wrapper">
@@ -1911,140 +1848,23 @@
 
         <div class="showcase-slider-container">
           <div class="showcase-track" id="showcase-track">
-            <!-- Slide 1: The Holdovers -->
+            <!-- 1. Past Lives -->
             <div class="showcase-slide">
-              <span class="showcase-badge">4K Movie</span>
-              <img src="assets/images/1000148228-iptv-france.webp" alt="Alt tag for The Holdovers film stream on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
-              <div class="showcase-overlay">
-                <h3 class="showcase-title">The Holdovers</h3>
-                <div class="showcase-info">
-                  <span>Comedy / Drama</span>
-                  <span class="showcase-quality">4K UHD</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 2: La Sociedad de la Nieve -->
-            <div class="showcase-slide">
-              <span class="showcase-badge">Top Stream</span>
-              <img src="assets/images/1000148231-iptv-france.webp" alt="Alt tag for La Sociedad de la Nieve movie poster on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
-              <div class="showcase-overlay">
-                <h3 class="showcase-title">La Sociedad de la Nieve</h3>
-                <div class="showcase-info">
-                  <span>Survival / Adventure</span>
-                  <span class="showcase-quality">1080p</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 3: Masters of the Air -->
-            <div class="showcase-slide">
-              <span class="showcase-badge">Full Series</span>
-              <img src="assets/images/1000148225-iptv-france.webp" alt="Alt tag for Masters of the Air mini-series on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
-              <div class="showcase-overlay">
-                <h3 class="showcase-title">Masters of the Air</h3>
-                <div class="showcase-info">
-                  <span>War / History</span>
-                  <span class="showcase-quality">4K UHD</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 4: Dune: Part Two -->
-            <div class="showcase-slide">
-              <span class="showcase-badge">New Release</span>
-              <img src="assets/images/1000148224-iptv-france.webp" alt="Alt tag for Dune Part Two blockbuster movie on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
-              <div class="showcase-overlay">
-                <h3 class="showcase-title">Dune: Part Two</h3>
-                <div class="showcase-info">
-                  <span>Sci-Fi / Action</span>
-                  <span class="showcase-quality">4K UHD</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 5: Shaitaan -->
-            <div class="showcase-slide">
-              <span class="showcase-badge">Trending</span>
-              <img src="assets/images/1000148226-iptv-france.webp" alt="Alt tag for Shaitaan thriller film stream on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
-              <div class="showcase-overlay">
-                <h3 class="showcase-title">Shaitaan</h3>
-                <div class="showcase-info">
-                  <span>Horror / Thriller</span>
-                  <span class="showcase-quality">1080p</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 6: 20 Days in Mariupol -->
-            <div class="showcase-slide">
-              <span class="showcase-badge">Documentary</span>
-              <img src="assets/images/1000148229-iptv-france.webp" alt="Alt tag for 20 Days in Mariupol documentary on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
-              <div class="showcase-overlay">
-                <h3 class="showcase-title">20 Days in Mariupol</h3>
-                <div class="showcase-info">
-                  <span>Documentary</span>
-                  <span class="showcase-quality">1080p</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 7: The Last Airbender -->
-            <div class="showcase-slide">
-              <span class="showcase-badge">Netflix Hit</span>
-              <img src="assets/images/1000148227-iptv-france.webp" alt="Alt tag for Avatar The Last Airbender series on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
-              <div class="showcase-overlay">
-                <h3 class="showcase-title">The Last Airbender</h3>
-                <div class="showcase-info">
-                  <span>Action / Fantasy</span>
-                  <span class="showcase-quality">4K UHD</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 8: Damsel -->
-            <div class="showcase-slide">
-              <span class="showcase-badge">Popular</span>
-              <img src="assets/images/1000148216-iptv-france.webp" alt="Alt tag for Damsel movie stream on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
-              <div class="showcase-overlay">
-                <h3 class="showcase-title">Damsel</h3>
-                <div class="showcase-info">
-                  <span>Fantasy / Adventure</span>
-                  <span class="showcase-quality">4K UHD</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 9: Alien: Romulus -->
-            <div class="showcase-slide">
-              <span class="showcase-badge">Coming Soon</span>
-              <img src="assets/images/1000148215-iptv-france.webp" alt="Alt tag for Alien Romulus sci-fi horror stream on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
-              <div class="showcase-overlay">
-                <h3 class="showcase-title">Alien: Romulus</h3>
-                <div class="showcase-info">
-                  <span>Sci-Fi / Horror</span>
-                  <span class="showcase-quality">4K UHD</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 10: Past Lives -->
-            <div class="showcase-slide">
-              <span class="showcase-badge">Highly Rated</span>
-              <img src="assets/images/1000148213-iptv-france.webp" alt="Alt tag for Past Lives romance movie on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
+              <span class="showcase-badge">TOP RATED</span>
+              <img src="/1000148213-iptv-france.webp" alt="Stream Past Lives on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Past Lives</h3>
                 <div class="showcase-info">
                   <span>Romance / Drama</span>
-                  <span class="showcase-quality">1080p</span>
+                  <span class="showcase-quality">4K UHD</span>
                 </div>
               </div>
             </div>
 
-            <!-- Slide 11: Road House -->
+            <!-- 2. Road House -->
             <div class="showcase-slide">
-              <span class="showcase-badge">Action Hit</span>
-              <img src="assets/images/1000148217-iptv-france.webp" alt="Alt tag for Road House action movie starring Jake Gyllenhaal on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
+              <span class="showcase-badge">ACTION HIT</span>
+              <img src="/1000148217-iptv-france.webp" alt="Stream Road House on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Road House</h3>
                 <div class="showcase-info">
@@ -2054,10 +1874,10 @@
               </div>
             </div>
 
-            <!-- Slide 12: Saltburn -->
+            <!-- 3. Saltburn -->
             <div class="showcase-slide">
-              <span class="showcase-badge">Must Watch</span>
-              <img src="assets/images/1000148233-iptv-france.webp" alt="Alt tag for Saltburn thriller on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
+              <span class="showcase-badge">MUST WATCH</span>
+              <img src="/1000148233-iptv-france.webp" alt="Stream Saltburn on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Saltburn</h3>
                 <div class="showcase-info">
@@ -2067,23 +1887,10 @@
               </div>
             </div>
 
-            <!-- Slide 13: Inception -->
+            <!-- 4. Killers of the Flower Moon -->
             <div class="showcase-slide">
-              <span class="showcase-badge">Classic</span>
-              <img src="assets/images/1000148232-iptv-france.webp" alt="Alt tag for Inception Christopher Nolan classic on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
-              <div class="showcase-overlay">
-                <h3 class="showcase-title">Inception</h3>
-                <div class="showcase-info">
-                  <span>Sci-Fi / Action</span>
-                  <span class="showcase-quality">4K UHD</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 14: Killers of the Flower Moon -->
-            <div class="showcase-slide">
-              <span class="showcase-badge">Oscar Nominee</span>
-              <img src="assets/images/1000148230-iptv-france.webp" alt="Alt tag for Killers of the Flower Moon Martin Scorsese movie on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
+              <span class="showcase-badge">OSCAR NOMINEE</span>
+              <img src="/1000148230-iptv-france.webp" alt="Stream Killers of the Flower Moon on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Killers of the Flower Moon</h3>
                 <div class="showcase-info">
@@ -2093,12 +1900,25 @@
               </div>
             </div>
 
-            <!-- Slide 15: Shōgun -->
+            <!-- 5. Inception -->
             <div class="showcase-slide">
-              <span class="showcase-badge">Critics Choice</span>
-              <img src="assets/images/1000148219-iptv-france.webp" alt="Alt tag for Shōgun historical drama series on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
+              <span class="showcase-badge">CLASSIC</span>
+              <img src="/1000148232-iptv-france.webp" alt="Stream Inception on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
-                <h3 class="showcase-title">Shōgun</h3>
+                <h3 class="showcase-title">Inception</h3>
+                <div class="showcase-info">
+                  <span>Sci-Fi / Action</span>
+                  <span class="showcase-quality">4K UHD</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6. Shogun -->
+            <div class="showcase-slide">
+              <span class="showcase-badge">CRITICS CHOICE</span>
+              <img src="/1000148219-iptv-france.webp" alt="Stream Shogun on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <div class="showcase-overlay">
+                <h3 class="showcase-title">Shogun</h3>
                 <div class="showcase-info">
                   <span>History / Drama</span>
                   <span class="showcase-quality">4K UHD</span>
@@ -2106,10 +1926,10 @@
               </div>
             </div>
 
-            <!-- Slide 16: Poor Things -->
+            <!-- 7. Poor Things -->
             <div class="showcase-slide">
-              <span class="showcase-badge">Award Winner</span>
-              <img src="assets/images/1000148223-iptv-france.webp" alt="Alt tag for Poor Things Oscar winning film on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
+              <span class="showcase-badge">AWARD WINNER</span>
+              <img src="/1000148223-iptv-france.webp" alt="Stream Poor Things on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Poor Things</h3>
                 <div class="showcase-info">
@@ -2119,10 +1939,10 @@
               </div>
             </div>
 
-            <!-- Slide 17: 3 Body Problem -->
+            <!-- 8. 3 Body Problem -->
             <div class="showcase-slide">
-              <span class="showcase-badge">Sci-Fi Epic</span>
-              <img src="assets/images/1000148222-iptv-france.webp" alt="Alt tag for 3 Body Problem sci-fi series on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
+              <span class="showcase-badge">SCI-FI EPIC</span>
+              <img src="/1000148222-iptv-france.webp" alt="Stream 3 Body Problem on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">3 Body Problem</h3>
                 <div class="showcase-info">
@@ -2132,10 +1952,10 @@
               </div>
             </div>
 
-            <!-- Slide 18: Breaking Bad -->
+            <!-- 9. Breaking Bad -->
             <div class="showcase-slide">
-              <span class="showcase-badge">All-Time Best</span>
-              <img src="assets/images/1000148214-iptv-france.webp" alt="Alt tag for Breaking Bad full series stream on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
+              <span class="showcase-badge">ALL-TIME BEST</span>
+              <img src="/1000148214-iptv-france.webp" alt="Stream Breaking Bad on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Breaking Bad</h3>
                 <div class="showcase-info">
@@ -2145,10 +1965,10 @@
               </div>
             </div>
 
-            <!-- Slide 19: Ghostbusters: Frozen Empire -->
+            <!-- 10. Ghostbusters: Frozen Empire -->
             <div class="showcase-slide">
-              <span class="showcase-badge">Family Hit</span>
-              <img src="assets/images/1000148218-iptv-france.webp" alt="Alt tag for Ghostbusters Frozen Empire comedy-adventure movie on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
+              <span class="showcase-badge">FAMILY HIT</span>
+              <img src="/1000148218-iptv-france.webp" alt="Stream Ghostbusters: Frozen Empire on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Ghostbusters: Frozen Empire</h3>
                 <div class="showcase-info">
@@ -2158,10 +1978,153 @@
               </div>
             </div>
 
-            <!-- Slide 20: The Gentlemen -->
+            <!-- 11. The Holdovers -->
             <div class="showcase-slide">
-              <span class="showcase-badge">Guy Ritchie</span>
-              <img src="assets/images/1000148221-iptv-france.webp" alt="Alt tag for The Gentlemen series by Guy Ritchie on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
+              <span class="showcase-badge">COMEDY HIT</span>
+              <img src="/1000148228-iptv-france.webp" alt="Stream The Holdovers on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <div class="showcase-overlay">
+                <h3 class="showcase-title">The Holdovers</h3>
+                <div class="showcase-info">
+                  <span>Comedy / Drama</span>
+                  <span class="showcase-quality">4K UHD</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 12. La Sociedad de la Nieve -->
+            <div class="showcase-slide">
+              <span class="showcase-badge">TOP STREAM</span>
+              <img src="/1000148231-iptv-france.webp" alt="Stream La Sociedad de la Nieve on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <div class="showcase-overlay">
+                <h3 class="showcase-title">La Sociedad de la Nieve</h3>
+                <div class="showcase-info">
+                  <span>Survival / Adventure</span>
+                  <span class="showcase-quality">1080p</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 13. Masters of the Air -->
+            <div class="showcase-slide">
+              <span class="showcase-badge">FULL SERIES</span>
+              <img src="/1000148225-iptv-france.webp" alt="Stream Masters of the Air on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <div class="showcase-overlay">
+                <h3 class="showcase-title">Masters of the Air</h3>
+                <div class="showcase-info">
+                  <span>War / History</span>
+                  <span class="showcase-quality">4K UHD</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 14. Shaitaan -->
+            <div class="showcase-slide">
+              <span class="showcase-badge">TRENDING</span>
+              <img src="/1000148226-iptv-france.webp" alt="Stream Shaitaan on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <div class="showcase-overlay">
+                <h3 class="showcase-title">Shaitaan</h3>
+                <div class="showcase-info">
+                  <span>Horror / Thriller</span>
+                  <span class="showcase-quality">1080p</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 15. 20 Days in Mariupol -->
+            <div class="showcase-slide">
+              <span class="showcase-badge">DOCUMENTARY</span>
+              <img src="/1000148229-iptv-france.webp" alt="Stream 20 Days in Mariupol on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <div class="showcase-overlay">
+                <h3 class="showcase-title">20 Days in Mariupol</h3>
+                <div class="showcase-info">
+                  <span>Documentary</span>
+                  <span class="showcase-quality">1080p</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 16. Avatar: The Last Airbender -->
+            <div class="showcase-slide">
+              <span class="showcase-badge">NETFLIX HIT</span>
+              <img src="/1000148227-iptv-france.webp" alt="Stream Avatar: The Last Airbender on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <div class="showcase-overlay">
+                <h3 class="showcase-title">The Last Airbender</h3>
+                <div class="showcase-info">
+                  <span>Action / Fantasy</span>
+                  <span class="showcase-quality">4K UHD</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 17. Succession -->
+            <div class="showcase-slide">
+              <span class="showcase-badge">HBO ORIGINAL</span>
+              <img src="/1000148216-iptv-france.webp" alt="Stream Succession on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <div class="showcase-overlay">
+                <h3 class="showcase-title">Succession</h3>
+                <div class="showcase-info">
+                  <span>Drama / Corporate</span>
+                  <span class="showcase-quality">4K UHD</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 18. The Last of Us -->
+            <div class="showcase-slide">
+              <span class="showcase-badge">POPULAR</span>
+              <img src="/1000148215-iptv-france.webp" alt="Stream The Last of Us on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <div class="showcase-overlay">
+                <h3 class="showcase-title">The Last of Us</h3>
+                <div class="showcase-info">
+                  <span>Sci-Fi / Drama</span>
+                  <span class="showcase-quality">4K UHD</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 19. The Bear -->
+            <div class="showcase-slide">
+              <span class="showcase-badge">CRITICS CHOICE</span>
+              <img src="/1000148224-iptv-france.webp" alt="Stream The Bear on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <div class="showcase-overlay">
+                <h3 class="showcase-title">The Bear</h3>
+                <div class="showcase-info">
+                  <span>Comedy / Drama</span>
+                  <span class="showcase-quality">4K UHD</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 20. Severance -->
+            <div class="showcase-slide">
+              <span class="showcase-badge">MIND-BENDING</span>
+              <img src="/1000148220-iptv-france.webp" alt="Stream Severance on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <div class="showcase-overlay">
+                <h3 class="showcase-title">Severance</h3>
+                <div class="showcase-info">
+                  <span>Sci-Fi / Mystery</span>
+                  <span class="showcase-quality">4K UHD</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 21. Damsel -->
+            <div class="showcase-slide">
+              <span class="showcase-badge">FANTASY HIT</span>
+              <img src="/1000148216-iptv-france.webp" alt="Stream Damsel on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <div class="showcase-overlay">
+                <h3 class="showcase-title">Damsel</h3>
+                <div class="showcase-info">
+                  <span>Fantasy / Adventure</span>
+                  <span class="showcase-quality">4K UHD</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 22. The Gentlemen -->
+            <div class="showcase-slide">
+              <span class="showcase-badge">GUY RITCHIE</span>
+              <img src="/1000148221-iptv-france.webp" alt="Stream The Gentlemen on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">The Gentlemen</h3>
                 <div class="showcase-info">
@@ -2171,10 +2134,10 @@
               </div>
             </div>
 
-            <!-- Slide 21: The Shawshank Redemption -->
+            <!-- 23. The Shawshank Redemption -->
             <div class="showcase-slide">
               <span class="showcase-badge">IMDb #1</span>
-              <img src="assets/images/1000148211-iptv-france.webp" alt="Alt tag for The Shawshank Redemption classic movie on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
+              <img src="/1000148211-iptv-france.webp" alt="Stream The Shawshank Redemption on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">The Shawshank Redemption</h3>
                 <div class="showcase-info">
@@ -2184,10 +2147,10 @@
               </div>
             </div>
 
-            <!-- Slide 22: Fight Club -->
+            <!-- 24. Fight Club -->
             <div class="showcase-slide">
-              <span class="showcase-badge">Cult Classic</span>
-              <img src="assets/images/1000148209-iptv-france.webp" alt="Alt tag for Fight Club cult classic on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
+              <span class="showcase-badge">CULT CLASSIC</span>
+              <img src="/1000148209-iptv-france.webp" alt="Stream Fight Club on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Fight Club</h3>
                 <div class="showcase-info">
@@ -2197,10 +2160,10 @@
               </div>
             </div>
 
-            <!-- Slide 23: Joker -->
+            <!-- 25. Joker -->
             <div class="showcase-slide">
-              <span class="showcase-badge">Masterpiece</span>
-              <img src="assets/images/1000148212-iptv-france.webp" alt="Alt tag for Joker movie starring Joaquin Phoenix on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
+              <span class="showcase-badge">MASTERPIECE</span>
+              <img src="/1000148212-iptv-france.webp" alt="Stream Joker on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Joker</h3>
                 <div class="showcase-info">
@@ -2210,40 +2173,14 @@
               </div>
             </div>
 
-            <!-- Slide 24: The Dark Knight -->
+            <!-- 26. The Dark Knight -->
             <div class="showcase-slide">
-              <span class="showcase-badge">Best Hero</span>
-              <img src="assets/images/1000148210-iptv-france.webp" alt="Alt tag for The Dark Knight superhero film on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
+              <span class="showcase-badge">BEST HERO</span>
+              <img src="/1000148210-iptv-france.webp" alt="Stream The Dark Knight on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">The Dark Knight</h3>
                 <div class="showcase-info">
                   <span>Action / Crime</span>
-                  <span class="showcase-quality">4K UHD</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 25: Aquaman & Lost Kingdom -->
-            <div class="showcase-slide">
-              <span class="showcase-badge">DC Universe</span>
-              <img src="assets/images/1000148196-iptv-france.webp" alt="Alt tag for Aquaman and the Lost Kingdom movie on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
-              <div class="showcase-overlay">
-                <h3 class="showcase-title">Aquaman & Lost Kingdom</h3>
-                <div class="showcase-info">
-                  <span>Action / Fantasy</span>
-                  <span class="showcase-quality">4K UHD</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 26: Dune -->
-            <div class="showcase-slide">
-              <span class="showcase-badge">Sci-Fi Classic</span>
-              <img src="assets/images/1000148220-iptv-france.webp" alt="Alt tag for Dune sci-fi blockbuster on IPTV France - Premium Cinema Streaming" loading="lazy" referrerPolicy="no-referrer" onload="this.classList.add('loaded')" onerror="handleMovieImageError(this)">
-              <div class="showcase-overlay">
-                <h3 class="showcase-title">Dune</h3>
-                <div class="showcase-info">
-                  <span>Sci-Fi / Adventure</span>
                   <span class="showcase-quality">4K UHD</span>
                 </div>
               </div>
@@ -2683,9 +2620,6 @@
               img.addEventListener('load', () => {
                 img.classList.add('loaded');
               });
-              img.addEventListener('error', () => {
-                window.handleMovieImageError(img);
-              });
             }
           });
         } catch (imgLoadErr) {
@@ -3045,170 +2979,71 @@
           });
         }
 
-        // 6. Trending Entertainment Showcase Slider Script
-        const showcaseTrack = document.getElementById('showcase-track');
-        const showcasePrevBtn = document.getElementById('showcase-prev');
-        const showcaseNextBtn = document.getElementById('showcase-next');
-        const showcaseDotsContainer = document.getElementById('showcase-dots');
-        const showcaseSlides = document.querySelectorAll('.showcase-slide');
-        const totalShowcaseSlides = showcaseSlides.length;
-        let showcaseCurrentIndex = 0;
-        let showcaseAutoPlayInterval = null;
-
-        function getVisibleSlidesCount() {
-          const width = window.innerWidth;
-          if (width > 1024) return 4;
-          if (width > 768) return 3;
-          if (width > 480) return 2;
-          return 1;
-        }
-
-        function updateShowcaseSlider() {
-          if (!showcaseTrack || showcaseSlides.length === 0) return;
-          const visibleCount = getVisibleSlidesCount();
-          const maxIndex = totalShowcaseSlides - visibleCount;
-
-          if (showcaseCurrentIndex > maxIndex) {
-            showcaseCurrentIndex = maxIndex;
-          }
-          if (showcaseCurrentIndex < 0) {
-            showcaseCurrentIndex = 0;
-          }
-
-          const slideWidth = showcaseSlides[0].getBoundingClientRect().width;
-          const gap = 20; // 20px gap from CSS
-          const offset = showcaseCurrentIndex * (slideWidth + gap);
-          showcaseTrack.style.transform = `translateX(-${offset}px)`;
-
-          updateShowcaseDots(maxIndex);
-        }
-
-        function updateShowcaseDots(maxIndex) {
-          if (!showcaseDotsContainer) return;
-          showcaseDotsContainer.innerHTML = '';
+        // --- NEW: Trending Entertainment Showcase Slider Navigation & Dot Synchronization ---
+        try {
+          const showcaseTrack = document.getElementById('showcase-track');
+          const showcasePrevBtn = document.getElementById('showcase-prev');
+          const showcaseNextBtn = document.getElementById('showcase-next');
+          const showcaseDotsContainer = document.getElementById('showcase-dots');
+          const showcaseSlides = document.querySelectorAll('.showcase-slide');
+          const numDots = 8; // Stable number of dots
           
-          const numDots = Math.min(8, maxIndex + 1);
-          if (numDots <= 1) return;
-
-          for (let i = 0; i < numDots; i++) {
-            const dot = document.createElement('div');
-            dot.className = 'showcase-dot';
-            
-            const targetIndex = Math.round((i / (numDots - 1)) * maxIndex);
-            const activeDotIndex = Math.round((showcaseCurrentIndex / maxIndex) * (numDots - 1));
-            if (i === activeDotIndex) {
-              dot.classList.add('active');
-            }
-
-            dot.addEventListener('click', () => {
-              showcaseCurrentIndex = targetIndex;
-              updateShowcaseSlider();
-              resetShowcaseAutoPlay();
-            });
-
-            showcaseDotsContainer.appendChild(dot);
+          function getVisibleSlidesCount() {
+            const width = window.innerWidth;
+            if (width > 1024) return 4;
+            if (width > 768) return 3;
+            if (width > 480) return 2;
+            return 1.33;
           }
-        }
 
-        function nextShowcaseSlide() {
-          const visibleCount = getVisibleSlidesCount();
-          const maxIndex = totalShowcaseSlides - visibleCount;
-          if (showcaseCurrentIndex >= maxIndex) {
-            showcaseCurrentIndex = 0;
-          } else {
-            showcaseCurrentIndex++;
-          }
-          updateShowcaseSlider();
-        }
-
-        function prevShowcaseSlide() {
-          const visibleCount = getVisibleSlidesCount();
-          const maxIndex = totalShowcaseSlides - visibleCount;
-          if (showcaseCurrentIndex <= 0) {
-            showcaseCurrentIndex = maxIndex;
-          } else {
-            showcaseCurrentIndex--;
-          }
-          updateShowcaseSlider();
-        }
-
-        function startShowcaseAutoPlay() {
-          if (showcaseAutoPlayInterval) clearInterval(showcaseAutoPlayInterval);
-          showcaseAutoPlayInterval = setInterval(nextShowcaseSlide, 3500);
-        }
-
-        function resetShowcaseAutoPlay() {
-          startShowcaseAutoPlay();
-        }
-
-        if (showcasePrevBtn && showcaseNextBtn) {
-          showcasePrevBtn.addEventListener('click', () => {
-            prevShowcaseSlide();
-            resetShowcaseAutoPlay();
-          });
-
-          showcaseNextBtn.addEventListener('click', () => {
-            nextShowcaseSlide();
-            resetShowcaseAutoPlay();
-          });
-        }
-
-        const showcaseSliderSection = document.getElementById('showcase-section');
-        if (showcaseSliderSection) {
-          showcaseSliderSection.addEventListener('mouseenter', () => {
-            if (showcaseAutoPlayInterval) clearInterval(showcaseAutoPlayInterval);
-          });
-          showcaseSliderSection.addEventListener('mouseleave', () => {
-            startShowcaseAutoPlay();
-          });
-        }
-
-        window.addEventListener('resize', () => {
-          updateShowcaseSlider();
-        });
-
-        let startX = 0;
-        let isDragging = false;
-
-        if (showcaseTrack) {
-          showcaseTrack.addEventListener('touchstart', (e) => {
-            startX = e.touches[0].clientX;
-            isDragging = true;
-            if (showcaseAutoPlayInterval) clearInterval(showcaseAutoPlayInterval);
-          }, { passive: true });
-
-          showcaseTrack.addEventListener('touchmove', (e) => {
-            if (!isDragging) return;
-            const currentX = e.touches[0].clientX;
-            const diff = currentX - startX;
-            const visibleCount = getVisibleSlidesCount();
-            const maxIndex = totalShowcaseSlides - visibleCount;
+          function scrollSlider(direction) {
+            if (!showcaseTrack || showcaseSlides.length === 0) return;
             const slideWidth = showcaseSlides[0].getBoundingClientRect().width;
             const gap = 20;
-            const baseOffset = -showcaseCurrentIndex * (slideWidth + gap);
-            showcaseTrack.style.transform = `translateX(${baseOffset + diff}px)`;
-          }, { passive: true });
-
-          showcaseTrack.addEventListener('touchend', (e) => {
-            if (!isDragging) return;
-            isDragging = false;
-            const endX = e.changedTouches[0].clientX;
-            const diff = endX - startX;
-            if (diff < -50) {
-              nextShowcaseSlide();
-            } else if (diff > 50) {
-              prevShowcaseSlide();
+            const scrollAmount = (slideWidth + gap) * Math.round(getVisibleSlidesCount());
+            if (direction === 'next') {
+              showcaseTrack.scrollBy({ left: scrollAmount, behavior: 'smooth' });
             } else {
-              updateShowcaseSlider();
+              showcaseTrack.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
             }
-            startShowcaseAutoPlay();
-          });
+          }
+
+          function updateDots() {
+            if (!showcaseTrack || !showcaseDotsContainer) return;
+            showcaseDotsContainer.innerHTML = '';
+            const maxScrollLeft = showcaseTrack.scrollWidth - showcaseTrack.clientWidth;
+            if (maxScrollLeft <= 0) return;
+            
+            const currentScrollRatio = showcaseTrack.scrollLeft / maxScrollLeft;
+            const activeDotIndex = Math.min(numDots - 1, Math.max(0, Math.round(currentScrollRatio * (numDots - 1))));
+
+            for (let i = 0; i < numDots; i++) {
+              const dot = document.createElement('div');
+              dot.className = 'showcase-dot' + (i === activeDotIndex ? ' active' : '');
+              
+              dot.addEventListener('click', () => {
+                const targetScrollLeft = (i / (numDots - 1)) * maxScrollLeft;
+                showcaseTrack.scrollTo({ left: targetScrollLeft, behavior: 'smooth' });
+              });
+              showcaseDotsContainer.appendChild(dot);
+            }
+          }
+
+          if (showcasePrevBtn && showcaseNextBtn) {
+            showcasePrevBtn.addEventListener('click', () => scrollSlider('prev'));
+            showcaseNextBtn.addEventListener('click', () => scrollSlider('next'));
+          }
+
+          if (showcaseTrack) {
+            showcaseTrack.addEventListener('scroll', updateDots);
+            window.addEventListener('resize', updateDots);
+            setTimeout(updateDots, 300);
+          }
+        } catch (sliderErr) {
+          console.error('[Slider Setup] Error initializing showcase slider:', sliderErr);
         }
 
-        setTimeout(() => {
-          updateShowcaseSlider();
-          startShowcaseAutoPlay();
-        }, 100);
+
 
         console.log('[RedStream Tracking] WhatsApp links successfully initialized with dynamic campaign metadata.');
       } catch (err) {
