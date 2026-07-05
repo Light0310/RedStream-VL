@@ -521,6 +521,77 @@ export default function Home({ currentLang = 'en', onChangeLanguage }: HomeProps
       {/* Scroll Progress Bar */}
       <div id="scroll-progress-bar"></div>
 
+      {/* Semantic Headings for SEO Parsers, Crawlers and Search Robots */}
+      <div 
+        className="sr-only" 
+        style={{ 
+          position: 'absolute', 
+          width: '1px', 
+          height: '1px', 
+          padding: 0, 
+          margin: '-1px', 
+          overflow: 'hidden', 
+          clip: 'rect(0, 0, 0, 0)', 
+          whiteSpace: 'nowrap', 
+          borderWidth: 0 
+        }}
+      >
+        <h1>
+          {currentLang === 'ar' 
+            ? 'RedStream™ IPTV متميز - أفضل خدمة اشتراك IPTV مستقرة لعام 2026' 
+            : currentLang === 'es' 
+            ? 'RedStream™ IPTV Premium - El Mejor Servicio de Suscripción IPTV Estable de 2026'
+            : currentLang === 'nl'
+            ? 'RedStream™ Premium IPTV - Beste Stabiele IPTV-abonnement Service 2026'
+            : 'RedStream™ Premium IPTV - Ultimate 4K IPTV Service 2026'}
+        </h1>
+        <h2>
+          {currentLang === 'ar'
+            ? 'لماذا RedStream هو المزود الممتاز رقم #1'
+            : currentLang === 'es'
+            ? 'Por Qué RedStream es el Proveedor Premium N.º 1'
+            : currentLang === 'nl'
+            ? 'Waarom RedStream de #1 Premium IPTV-aanbieder is'
+            : 'Why RedStream is the #1 Premium Provider'}
+        </h2>
+        <h2>
+          {currentLang === 'ar'
+            ? 'التحقق من توافق الأجهزة والأنظمة'
+            : currentLang === 'es'
+            ? 'Verificar Compatibilidad de Dispositivos'
+            : currentLang === 'nl'
+            ? 'Controleer Apparaatcompatibiliteit'
+            : 'Check Device Compatibility'}
+        </h2>
+        <h2>
+          {currentLang === 'ar'
+            ? 'اختر باقة RedStream المناسبة لك'
+            : currentLang === 'es'
+            ? 'Elija Su Plan de RedStream Premium'
+            : currentLang === 'nl'
+            ? 'Kies Uw RedStream Premium Plan'
+            : 'Choose Your RedStream Plan'}
+        </h2>
+        <h2>
+          {currentLang === 'ar'
+            ? 'ماذا يقول أعضاؤنا المميزون'
+            : currentLang === 'es'
+            ? 'Lo Que Dicen Nuestros Miembros Premium'
+            : currentLang === 'nl'
+            ? 'Wat Onze Premium Leden Zeggen'
+            : 'What Our Premium Members Say'}
+        </h2>
+        <h2>
+          {currentLang === 'ar'
+            ? 'الأسئلة الشائعة والاستفسارات'
+            : currentLang === 'es'
+            ? 'Preguntas Frecuentes'
+            : currentLang === 'nl'
+            ? 'Veelgestelde Vragen'
+            : 'Frequently Asked Questions'}
+        </h2>
+      </div>
+
       {/* Navigation Header */}
       <header>
         <div className="container nav-container">
