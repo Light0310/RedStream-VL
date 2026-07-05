@@ -58,7 +58,15 @@ export default function App() {
   // Enforce structured hash URLs on hash change or mount
   useEffect(() => {
     const handleHashChange = () => {
-      const parsed = parseHash(window.location.hash);
+      const hash = window.location.hash;
+
+      // If it is a local anchor link on the landing page (e.g., #features, #pricing),
+      // let the landing page component handle smooth scrolling naturally without resetting the hash
+      if (hash && hash.startsWith('#') && !hash.startsWith('#/')) {
+        return;
+      }
+
+      const parsed = parseHash(hash);
       const targetHash = parsed.view === 'post'
         ? `#/${parsed.lang}/blog/${parsed.slug}`
         : `#/${parsed.lang}/${parsed.view}`;
@@ -130,7 +138,7 @@ export default function App() {
       
       {/* 1. VIEW: HOME (Render standard landing page with absolutely zero extra visual rails or banners) */}
       {route.view === 'home' ? (
-        <Home />
+        <Home currentLang={route.lang} onChangeLanguage={changeLanguage} />
       ) : (
         /* 2. VIEW: BLOG OR BLOG POST (Render beautifully custom integrated premium dark header/footer) */
         <div className="flex flex-col min-h-screen bg-[#0a0a0a]">

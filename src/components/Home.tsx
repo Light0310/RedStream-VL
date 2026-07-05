@@ -4,9 +4,24 @@
  */
 
 import { useState, useEffect } from 'react';
+import { Globe, ChevronDown } from 'lucide-react';
+import { Language } from '../types';
 
-export default function Home() {
+const languageNames: Record<Language, { native: string; flag: string; label: string }> = {
+  en: { native: 'English', flag: '🇬🇧', label: 'EN' },
+  ar: { native: 'العربية', flag: '🇲🇦', label: 'AR' },
+  es: { native: 'Español', flag: '🇪🇸', label: 'ES' },
+  nl: { native: 'Nederlands', flag: '🇳🇱', label: 'NL' },
+};
+
+interface HomeProps {
+  currentLang?: Language;
+  onChangeLanguage?: (lang: Language) => void;
+}
+
+export default function Home({ currentLang = 'en', onChangeLanguage }: HomeProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [langDropdownOpen, setLangDropdownOpen] = useState(false);
 
   useEffect(() => {
     // 2. Smooth scroll offset adjustment for sticky header
@@ -513,21 +528,99 @@ export default function Home() {
           </a>
 
           {/* Desktop Nav links */}
-          <nav>
+          <nav style={{ display: 'flex', alignItems: 'center' }}>
             <ul className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`} id="nav-menu">
-              <li><a href="#" id="link-home" onClick={() => setIsMobileMenuOpen(false)}>Home</a></li>
-              <li><a href="#features" id="link-features" onClick={() => setIsMobileMenuOpen(false)}>Features</a></li>
-              <li><a href="#pricing" id="link-pricing" onClick={() => setIsMobileMenuOpen(false)}>Pricing</a></li>
-              <li><a href="#faq" id="link-faq" onClick={() => setIsMobileMenuOpen(false)}>FAQ</a></li>
-              <li><a href="#/en/blog" id="link-blog" style={{ color: '#FF1E27', fontWeight: 800 }} onClick={() => setIsMobileMenuOpen(false)}>Blog</a></li>
+              <li><a href="#" id="link-home" onClick={() => setIsMobileMenuOpen(false)}>{currentLang === 'ar' ? 'الرئيسية' : 'Home'}</a></li>
+              <li><a href="#features" id="link-features" onClick={() => setIsMobileMenuOpen(false)}>{currentLang === 'ar' ? 'المميزات' : 'Features'}</a></li>
+              <li><a href="#pricing" id="link-pricing" onClick={() => setIsMobileMenuOpen(false)}>{currentLang === 'ar' ? 'الأسعار' : 'Pricing'}</a></li>
+              <li><a href="#faq" id="link-faq" onClick={() => setIsMobileMenuOpen(false)}>{currentLang === 'ar' ? 'الأسئلة الشائعة' : 'FAQ'}</a></li>
+              <li><a href={`#/${currentLang}/blog`} id="link-blog" style={{ color: '#FF1E27', fontWeight: 800 }} onClick={() => setIsMobileMenuOpen(false)}>{currentLang === 'ar' ? 'المدونة' : 'Blog'}</a></li>
             </ul>
-            <a href="https://wa.me/212694843943?text=Hello%20RedStream,%20I%20want%20to%20get%20a%20free%20IPTV%20trial." target="_blank" rel="noopener noreferrer" className="nav-cta" id="nav-cta-trial">Get Free Trial</a>
+            <a href="https://wa.me/212694843943?text=Hello%20RedStream,%20I%20want%20to%20get%20a%20free%20IPTV%20trial." target="_blank" rel="noopener noreferrer" className="nav-cta" id="nav-cta-trial">{currentLang === 'ar' ? 'تجربة مجانية' : 'Get Free Trial'}</a>
             
+            {/* Elegant Language Switcher inside header */}
+            <div className="lang-switcher-wrapper" style={{ position: 'relative', display: 'inline-block', marginLeft: '12px' }}>
+              <button
+                onClick={() => setLangDropdownOpen(!langDropdownOpen)}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                  padding: '6px 12px',
+                  borderRadius: '8px',
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  backgroundColor: '#141414',
+                  color: 'white',
+                  fontSize: '12px',
+                  fontWeight: 'bold',
+                  cursor: 'pointer',
+                  transition: 'all 0.2s',
+                }}
+              >
+                <Globe size={14} style={{ color: '#9ca3af' }} />
+                <span>{languageNames[currentLang].flag} {languageNames[currentLang].label}</span>
+                <ChevronDown size={12} style={{ color: '#9ca3af', transform: langDropdownOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }} />
+              </button>
+
+              {langDropdownOpen && (
+                <>
+                  <div 
+                    style={{ position: 'fixed', inset: 0, zIndex: 999 }} 
+                    onClick={() => setLangDropdownOpen(false)} 
+                  />
+                  <div
+                    style={{
+                      position: 'absolute',
+                      right: 0,
+                      marginTop: '8px',
+                      width: '140px',
+                      borderRadius: '12px',
+                      border: '1px solid rgba(255, 255, 255, 0.1)',
+                      backgroundColor: '#141414',
+                      padding: '4px',
+                      boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.5)',
+                      zIndex: 1000,
+                    }}
+                  >
+                    {Object.entries(languageNames).map(([key, value]) => (
+                      <button
+                        key={key}
+                        onClick={() => {
+                          onChangeLanguage && onChangeLanguage(key as Language);
+                          setLangDropdownOpen(false);
+                        }}
+                        style={{
+                          width: '100%',
+                          textAlign: 'left',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '8px',
+                          padding: '8px 12px',
+                          fontSize: '12px',
+                          borderRadius: '8px',
+                          border: 'none',
+                          backgroundColor: currentLang === key ? 'rgba(255, 30, 39, 0.1)' : 'transparent',
+                          color: currentLang === key ? '#FF1E27' : '#d1d5db',
+                          fontWeight: currentLang === key ? 'bold' : 'normal',
+                          cursor: 'pointer',
+                          transition: 'background-color 0.2s, color 0.2s',
+                        }}
+                      >
+                        <span style={{ fontSize: '14px' }}>{value.flag}</span>
+                        <span>{value.native}</span>
+                      </button>
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
+
             <button 
               className="menu-toggle" 
               id="mobile-menu-btn" 
               aria-label="Toggle navigation menu"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              style={{ marginLeft: '12px' }}
             >
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round"/>
