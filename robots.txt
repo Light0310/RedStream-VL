@@ -4,4 +4,4 @@ Allow: /
 Allow: /assets/
 
 # Sitemap Location
-Sitemap: https://red-stream.store/sitemap.xml
+Sitemap: https://redstream-iptv.com/sitemap.xml
