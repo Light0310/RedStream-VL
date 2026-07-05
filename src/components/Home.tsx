@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 import { Globe, ChevronDown } from 'lucide-react';
 import { Language } from '../types';
 import { getTranslatedLandingHTML } from './HomeTranslations';
+import FAQSection from './FAQSection';
 
 const languageNames: Record<Language, { native: string; flag: string; label: string }> = {
   en: { native: 'English', flag: '🇬🇧', label: 'EN' },
@@ -716,12 +717,18 @@ export default function Home({ currentLang = 'en', onChangeLanguage }: HomeProps
       </header>
 
       {/* Hero Section & Rest of Landing Page Content */}
-      <div dangerouslySetInnerHTML={{ __html: getTranslatedLandingHTML(LANDING_HTML_REST, currentLang) }} />
+      <div dangerouslySetInnerHTML={{ __html: getTranslatedLandingHTML(LANDING_HTML_TOP, currentLang) }} />
+
+      {/* Sleek dynamic FAQ Accordion Component */}
+      <FAQSection currentLang={currentLang} />
+
+      {/* Footer and Bottom Floating Widgets */}
+      <div dangerouslySetInnerHTML={{ __html: getTranslatedLandingHTML(LANDING_HTML_BOTTOM, currentLang) }} />
     </>
   );
 }
 
-const LANDING_HTML_REST = `
+const LANDING_HTML_TOP = `
   <!-- Hero Section -->
   <section class="hero container" id="hero-section">
     <div class="badge" id="hero-badge">
@@ -1577,51 +1584,9 @@ const LANDING_HTML_REST = `
       </div>
     </div>
   </section>
+`;
 
-  <!-- Interactive Accordion FAQ Section -->
-  <section class="faq" id="faq">
-    <div class="container">
-      <div class="section-header">
-        <h2>Frequently Asked Questions</h2>
-        <p>Everything you need to know about setting up and streaming with RedStream IPTV.</p>
-      </div>
-
-      <div class="faq-container">
-        <!-- FAQ Item 1 -->
-        <details id="faq-item-1">
-          <summary>How do I activate my RedStream IPTV subscription?</summary>
-          <div class="faq-answer">
-            Activation is fast and instant! Once you complete your purchase, contact our support team via WhatsApp with your device details (e.g. Smart TV model, Firestick, MAG, Android box). We will guide you through the setup process and activate your stream within 10 to 15 minutes.
-          </div>
-        </details>
-
-        <!-- FAQ Item 2 -->
-        <details id="faq-item-2">
-          <summary>Is the server stable and freeze-free?</summary>
-          <div class="faq-answer">
-            Yes, absolutely. RedStream uses premium, high-bandwidth server clusters with smart load-balancing and advanced anti-freeze technology. We guarantee a 99.9% uptime and a fully stable streaming experience, even during high-traffic global live sports events.
-          </div>
-        </details>
-
-        <!-- FAQ Item 3 -->
-        <details id="faq-item-3">
-          <summary>Which devices are supported by RedStream?</summary>
-          <div class="faq-answer">
-            RedStream is compatible with almost all smart devices. This includes Smart TVs (Samsung, LG, Sony, Philips, Hisense), Amazon Firestick, Android TV Boxes, Apple TV, MAG Boxes, smartphones (iOS and Android), tablets, computers (Windows, Mac, Linux), and IPTV apps such as Smart IPTV, IPTV Smarters Pro, and Tivimate.
-          </div>
-        </details>
-
-        <!-- FAQ Item 4 (Added for completeness & trust) -->
-        <details id="faq-item-4">
-          <summary>Do you offer customer support if I run into issues?</summary>
-          <div class="faq-answer">
-            Yes, we offer dedicated 24/7 technical assistance directly on WhatsApp. If you ever have a question, need assistance loading your playlists, or require support on a new device, just drop us a message and an engineer will help you in real time.
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
+const LANDING_HTML_BOTTOM = `
   <!-- Payments & Brand Footer -->
   <footer class="payments-footer">
     <div class="container payments-container">
