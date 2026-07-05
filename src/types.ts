@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-export type Language = 'en' | 'ar' | 'es' | 'nl';
+export type Language = 'en' | 'ar' | 'es' | 'nl' | 'fr' | 'ru' | 'de';
 
 export type View = 'home' | 'blog' | 'post' | 'about';
 

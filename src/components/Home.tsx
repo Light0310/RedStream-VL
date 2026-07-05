@@ -13,13 +13,19 @@ const languageNames: Record<Language, { native: string; flag: string; label: str
   ar: { native: 'العربية', flag: '🇸🇦', label: 'AR' },
   es: { native: 'Español', flag: '🇪🇸', label: 'ES' },
   nl: { native: 'Nederlands', flag: '🇳🇱', label: 'NL' },
+  fr: { native: 'Français', flag: '🇫🇷', label: 'FR' },
+  ru: { native: 'Русский', flag: '🇷🇺', label: 'RU' },
+  de: { native: 'Deutsch', flag: '🇩🇪', label: 'DE' },
 };
 
 const navTranslations: Record<Language, { home: string; features: string; pricing: string; faq: string; blog: string; cta: string }> = {
   en: { home: 'Home', features: 'Features', pricing: 'Pricing', faq: 'FAQ', blog: 'Blog', cta: 'Get Free Trial' },
   ar: { home: 'الرئيسية', features: 'المميزات', pricing: 'الأسعار', faq: 'الأسئلة الشائعة', blog: 'المدونة', cta: 'تجربة مجانية' },
   es: { home: 'Inicio', features: 'Características', pricing: 'Precios', faq: 'Preguntas Frecuentes', blog: 'Blog', cta: 'Prueba Gratis' },
-  nl: { home: 'Home', features: 'Kenmerken', pricing: 'Prijzen', faq: 'FAQ', blog: 'Blog', cta: 'Gratis Test' }
+  nl: { home: 'Home', features: 'Kenmerken', pricing: 'Prijzen', faq: 'FAQ', blog: 'Blog', cta: 'Gratis Test' },
+  fr: { home: 'Accueil', features: 'Fonctionnalités', pricing: 'Tarifs', faq: 'FAQ', blog: 'Blog', cta: 'Essai gratuit' },
+  ru: { home: 'Главная', features: 'Преимущества', pricing: 'Цены', faq: 'Вопросы', blog: 'Блог', cta: 'Бесплатный тест' },
+  de: { home: 'Startseite', features: 'Funktionen', pricing: 'Preise', faq: 'FAQ', blog: 'Blog', cta: 'Kostenlose Testversion' }
 };
 
 interface HomeProps {

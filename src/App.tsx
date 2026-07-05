@@ -26,7 +26,7 @@ export default function App() {
     const cleanHash = hash.replace(/^#\/?/, '');
     const parts = cleanHash.split('/').filter(Boolean);
 
-    const validLanguages: Language[] = ['en', 'ar', 'es', 'nl'];
+    const validLanguages: Language[] = ['en', 'ar', 'es', 'nl', 'fr', 'ru', 'de'];
     const validViews: View[] = ['home', 'blog', 'post', 'about'];
 
     let lang: Language = 'en';
@@ -131,6 +131,9 @@ export default function App() {
     ar: { native: 'العربية', flag: '🇸🇦', label: 'AR' },
     es: { native: 'Español', flag: '🇪🇸', label: 'ES' },
     nl: { native: 'Nederlands', flag: '🇳🇱', label: 'NL' },
+    fr: { native: 'Français', flag: '🇫🇷', label: 'FR' },
+    ru: { native: 'Русский', flag: '🇷🇺', label: 'RU' },
+    de: { native: 'Deutsch', flag: '🇩🇪', label: 'DE' },
   };
 
   return (
