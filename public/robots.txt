@@ -4,4 +4,4 @@ Allow: /
 Allow: /assets/
 
 # Sitemap Location
-Sitemap: https://redstream.shop/sitemap.xml
+Sitemap: https://red-stream.store/sitemap.xml
