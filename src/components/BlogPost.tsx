@@ -184,7 +184,13 @@ export default function BlogPostComponent({ post, lang, t, onBack }: BlogPostPro
 
             {/* Rendered Markdown Body */}
             <div className="markdown-container">
-              <ReactMarkdown>{post.content}</ReactMarkdown>
+              <ReactMarkdown
+                components={{
+                  h1: ({ node, ...props }) => <h2 {...props} />,
+                }}
+              >
+                {post.content}
+              </ReactMarkdown>
             </div>
           </main>
 

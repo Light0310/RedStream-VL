@@ -230,19 +230,77 @@ export default function FAQSection({ currentLang }: FAQSectionProps) {
   const t = faqTranslations[currentLang] || faqTranslations.en;
   const isRtl = currentLang === 'ar';
 
-  // Inject valid FAQPage Schema Markup into head
+  // Inject valid combined Product and FAQPage Schema Markup into head
   useEffect(() => {
     const schema = {
       "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": t.items.map(item => ({
-        "@type": "Question",
-        "name": item.question,
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": item.answer
+      "@graph": [
+        {
+          "@type": "Product",
+          "name": "RedStream™ Premium IPTV Subscription",
+          "image": "https://www.red-stream.store/1000148211-iptv-france.webp",
+          "description": "Stream over 20,000+ live premium TV channels and 60,000+ blockbuster movies & VOD in stunning Ultra HD 4K with Anti-Freeze 9.0 Technology.",
+          "brand": {
+            "@type": "Brand",
+            "name": "RedStream™"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "15340",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "EUR",
+            "lowPrice": "2.00",
+            "highPrice": "49.00",
+            "offerCount": "4",
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "24 Hours Trial",
+                "price": "2.00",
+                "priceCurrency": "EUR",
+                "availability": "https://schema.org/InStock"
+              },
+              {
+                "@type": "Offer",
+                "name": "1 Month Premium Plan",
+                "price": "12.00",
+                "priceCurrency": "EUR",
+                "availability": "https://schema.org/InStock"
+              },
+              {
+                "@type": "Offer",
+                "name": "6 Months Premium Plan",
+                "price": "29.00",
+                "priceCurrency": "EUR",
+                "availability": "https://schema.org/InStock"
+              },
+              {
+                "@type": "Offer",
+                "name": "12 Months Premium Plan",
+                "price": "49.00",
+                "priceCurrency": "EUR",
+                "availability": "https://schema.org/InStock"
+              }
+            ]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": t.items.map(item => ({
+            "@type": "Question",
+            "name": item.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": item.answer
+            }
+          }))
         }
-      }))
+      ]
     };
 
     let script = document.getElementById('dynamic-faq-schema') as HTMLScriptElement;
