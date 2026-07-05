@@ -1242,7 +1242,7 @@ const LANDING_HTML_TOP = `
             <!-- 1. Past Lives -->
             <div class="showcase-slide">
               <span class="showcase-badge">TOP RATED</span>
-              <img src="public/1000148213-iptv-france.webp" alt="Stream Past Lives on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148213-iptv-france.webp" alt="Stream Past Lives on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Past Lives</h3>
                 <div class="showcase-info">
@@ -1255,7 +1255,7 @@ const LANDING_HTML_TOP = `
             <!-- 2. Road House -->
             <div class="showcase-slide">
               <span class="showcase-badge">ACTION HIT</span>
-              <img src="public/1000148217-iptv-france.webp" alt="Stream Road House on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148217-iptv-france.webp" alt="Stream Road House on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Road House</h3>
                 <div class="showcase-info">
@@ -1268,7 +1268,7 @@ const LANDING_HTML_TOP = `
             <!-- 3. Saltburn -->
             <div class="showcase-slide">
               <span class="showcase-badge">MUST WATCH</span>
-              <img src="public/1000148233-iptv-france.webp" alt="Stream Saltburn on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148233-iptv-france.webp" alt="Stream Saltburn on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Saltburn</h3>
                 <div class="showcase-info">
@@ -1281,7 +1281,7 @@ const LANDING_HTML_TOP = `
             <!-- 4. Killers of the Flower Moon -->
             <div class="showcase-slide">
               <span class="showcase-badge">OSCAR NOMINEE</span>
-              <img src="public/1000148230-iptv-france.webp" alt="Stream Killers of the Flower Moon on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148230-iptv-france.webp" alt="Stream Killers of the Flower Moon on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Killers of the Flower Moon</h3>
                 <div class="showcase-info">
@@ -1294,7 +1294,7 @@ const LANDING_HTML_TOP = `
             <!-- 5. Inception -->
             <div class="showcase-slide">
               <span class="showcase-badge">CLASSIC</span>
-              <img src="public/1000148232-iptv-france.webp" alt="Stream Inception on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148232-iptv-france.webp" alt="Stream Inception on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Inception</h3>
                 <div class="showcase-info">
@@ -1307,7 +1307,7 @@ const LANDING_HTML_TOP = `
             <!-- 6. Shogun -->
             <div class="showcase-slide">
               <span class="showcase-badge">CRITICS CHOICE</span>
-              <img src="public/1000148219-iptv-france.webp" alt="Stream Shogun on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148219-iptv-france.webp" alt="Stream Shogun on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Shogun</h3>
                 <div class="showcase-info">
@@ -1320,7 +1320,7 @@ const LANDING_HTML_TOP = `
             <!-- 7. Poor Things -->
             <div class="showcase-slide">
               <span class="showcase-badge">AWARD WINNER</span>
-              <img src="public/1000148223-iptv-france.webp" alt="Stream Poor Things on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148223-iptv-france.webp" alt="Stream Poor Things on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Poor Things</h3>
                 <div class="showcase-info">
@@ -1333,7 +1333,7 @@ const LANDING_HTML_TOP = `
             <!-- 8. 3 Body Problem -->
             <div class="showcase-slide">
               <span class="showcase-badge">SCI-FI EPIC</span>
-              <img src="public/1000148222-iptv-france.webp" alt="Stream 3 Body Problem on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148222-iptv-france.webp" alt="Stream 3 Body Problem on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">3 Body Problem</h3>
                 <div class="showcase-info">
@@ -1346,7 +1346,7 @@ const LANDING_HTML_TOP = `
             <!-- 9. Breaking Bad -->
             <div class="showcase-slide">
               <span class="showcase-badge">ALL-TIME BEST</span>
-              <img src="public/1000148214-iptv-france.webp" alt="Stream Breaking Bad on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148214-iptv-france.webp" alt="Stream Breaking Bad on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Breaking Bad</h3>
                 <div class="showcase-info">
@@ -1359,7 +1359,7 @@ const LANDING_HTML_TOP = `
             <!-- 10. Ghostbusters: Frozen Empire -->
             <div class="showcase-slide">
               <span class="showcase-badge">FAMILY HIT</span>
-              <img src="public/1000148218-iptv-france.webp" alt="Stream Ghostbusters: Frozen Empire on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148218-iptv-france.webp" alt="Stream Ghostbusters: Frozen Empire on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Ghostbusters: Frozen Empire</h3>
                 <div class="showcase-info">
@@ -1372,7 +1372,7 @@ const LANDING_HTML_TOP = `
             <!-- 11. The Holdovers -->
             <div class="showcase-slide">
               <span class="showcase-badge">COMEDY HIT</span>
-              <img src="public/1000148228-iptv-france.webp" alt="Stream The Holdovers on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148228-iptv-france.webp" alt="Stream The Holdovers on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">The Holdovers</h3>
                 <div class="showcase-info">
@@ -1385,7 +1385,7 @@ const LANDING_HTML_TOP = `
             <!-- 12. La Sociedad de la Nieve -->
             <div class="showcase-slide">
               <span class="showcase-badge">TOP STREAM</span>
-              <img src="public/1000148231-iptv-france.webp" alt="Stream La Sociedad de la Nieve on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148231-iptv-france.webp" alt="Stream La Sociedad de la Nieve on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">La Sociedad de la Nieve</h3>
                 <div class="showcase-info">
@@ -1398,7 +1398,7 @@ const LANDING_HTML_TOP = `
             <!-- 13. Masters of the Air -->
             <div class="showcase-slide">
               <span class="showcase-badge">FULL SERIES</span>
-              <img src="public/1000148225-iptv-france.webp" alt="Stream Masters of the Air on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148225-iptv-france.webp" alt="Stream Masters of the Air on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Masters of the Air</h3>
                 <div class="showcase-info">
@@ -1411,7 +1411,7 @@ const LANDING_HTML_TOP = `
             <!-- 14. Shaitaan -->
             <div class="showcase-slide">
               <span class="showcase-badge">TRENDING</span>
-              <img src="public/1000148226-iptv-france.webp" alt="Stream Shaitaan on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148226-iptv-france.webp" alt="Stream Shaitaan on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Shaitaan</h3>
                 <div class="showcase-info">
@@ -1424,7 +1424,7 @@ const LANDING_HTML_TOP = `
             <!-- 15. 20 Days in Mariupol -->
             <div class="showcase-slide">
               <span class="showcase-badge">DOCUMENTARY</span>
-              <img src="public/1000148229-iptv-france.webp" alt="Stream 20 Days in Mariupol on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148229-iptv-france.webp" alt="Stream 20 Days in Mariupol on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">20 Days in Mariupol</h3>
                 <div class="showcase-info">
@@ -1437,7 +1437,7 @@ const LANDING_HTML_TOP = `
             <!-- 16. Avatar: The Last Airbender -->
             <div class="showcase-slide">
               <span class="showcase-badge">NETFLIX HIT</span>
-              <img src="public/1000148227-iptv-france.webp" alt="Stream Avatar: The Last Airbender on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148227-iptv-france.webp" alt="Stream Avatar: The Last Airbender on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">The Last Airbender</h3>
                 <div class="showcase-info">
@@ -1450,7 +1450,7 @@ const LANDING_HTML_TOP = `
             <!-- 17. Succession -->
             <div class="showcase-slide">
               <span class="showcase-badge">HBO ORIGINAL</span>
-              <img src="public/1000148216-iptv-france.webp" alt="Stream Succession on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148216-iptv-france.webp" alt="Stream Succession on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Succession</h3>
                 <div class="showcase-info">
@@ -1463,7 +1463,7 @@ const LANDING_HTML_TOP = `
             <!-- 18. The Last of Us -->
             <div class="showcase-slide">
               <span class="showcase-badge">POPULAR</span>
-              <img src="public/1000148215-iptv-france.webp" alt="Stream The Last of Us on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148215-iptv-france.webp" alt="Stream The Last of Us on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">The Last of Us</h3>
                 <div class="showcase-info">
@@ -1476,7 +1476,7 @@ const LANDING_HTML_TOP = `
             <!-- 19. The Bear -->
             <div class="showcase-slide">
               <span class="showcase-badge">CRITICS CHOICE</span>
-              <img src="public/1000148224-iptv-france.webp" alt="Stream The Bear on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148224-iptv-france.webp" alt="Stream The Bear on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">The Bear</h3>
                 <div class="showcase-info">
@@ -1489,7 +1489,7 @@ const LANDING_HTML_TOP = `
             <!-- 20. Severance -->
             <div class="showcase-slide">
               <span class="showcase-badge">MIND-BENDING</span>
-              <img src="public/1000148220-iptv-france.webp" alt="Stream Severance on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148220-iptv-france.webp" alt="Stream Severance on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Severance</h3>
                 <div class="showcase-info">
@@ -1502,7 +1502,7 @@ const LANDING_HTML_TOP = `
             <!-- 21. Damsel -->
             <div class="showcase-slide">
               <span class="showcase-badge">FANTASY HIT</span>
-              <img src="public/1000148216-iptv-france.webp" alt="Stream Damsel on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148216-iptv-france.webp" alt="Stream Damsel on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Damsel</h3>
                 <div class="showcase-info">
@@ -1515,7 +1515,7 @@ const LANDING_HTML_TOP = `
             <!-- 22. The Gentlemen -->
             <div class="showcase-slide">
               <span class="showcase-badge">GUY RITCHIE</span>
-              <img src="public/1000148221-iptv-france.webp" alt="Stream The Gentlemen on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148221-iptv-france.webp" alt="Stream The Gentlemen on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">The Gentlemen</h3>
                 <div class="showcase-info">
@@ -1528,7 +1528,7 @@ const LANDING_HTML_TOP = `
             <!-- 23. The Shawshank Redemption -->
             <div class="showcase-slide">
               <span class="showcase-badge">IMDb #1</span>
-              <img src="public/1000148211-iptv-france.webp" alt="Stream The Shawshank Redemption on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148211-iptv-france.webp" alt="Stream The Shawshank Redemption on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">The Shawshank Redemption</h3>
                 <div class="showcase-info">
@@ -1541,7 +1541,7 @@ const LANDING_HTML_TOP = `
             <!-- 24. Fight Club -->
             <div class="showcase-slide">
               <span class="showcase-badge">CULT CLASSIC</span>
-              <img src="public/1000148209-iptv-france.webp" alt="Stream Fight Club on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148209-iptv-france.webp" alt="Stream Fight Club on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Fight Club</h3>
                 <div class="showcase-info">
@@ -1554,7 +1554,7 @@ const LANDING_HTML_TOP = `
             <!-- 25. Joker -->
             <div class="showcase-slide">
               <span class="showcase-badge">MASTERPIECE</span>
-              <img src="public/1000148212-iptv-france.webp" alt="Stream Joker on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148212-iptv-france.webp" alt="Stream Joker on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">Joker</h3>
                 <div class="showcase-info">
@@ -1567,7 +1567,7 @@ const LANDING_HTML_TOP = `
             <!-- 26. The Dark Knight -->
             <div class="showcase-slide">
               <span class="showcase-badge">BEST HERO</span>
-              <img src="public/1000148210-iptv-france.webp" alt="Stream The Dark Knight on IPTV France - Premium Cinema Streaming" loading="lazy">
+              <img src="/1000148210-iptv-france.webp" alt="Stream The Dark Knight on IPTV France - Premium Cinema Streaming" loading="lazy">
               <div class="showcase-overlay">
                 <h3 class="showcase-title">The Dark Knight</h3>
                 <div class="showcase-info">
