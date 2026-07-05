@@ -1,0 +1,384 @@
+<svg viewBox="0 0 1200 800" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bgGlow" cx="60%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#0F1026" />
+      <stop offset="40%" stop-color="#040514" />
+      <stop offset="100%" stop-color="#010208" />
+    </radialGradient>
+    
+    <!-- Neon Accent Gradients -->
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="100%" stop-color="#0072FF" />
+    </linearGradient>
+
+    <linearGradient id="neonPink" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF2E93" />
+      <stop offset="100%" stop-color="#FF8E53" />
+    </linearGradient>
+
+    <linearGradient id="neonPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9D4EDD" />
+      <stop offset="100%" stop-color="#FF007F" />
+    </linearGradient>
+
+    <!-- TV City Screen Gradient -->
+    <linearGradient id="citySkyline" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#060814" />
+      <stop offset="30%" stop-color="#141E30" />
+      <stop offset="70%" stop-color="#243B55" />
+      <stop offset="100%" stop-color="#00D2FF" />
+    </linearGradient>
+
+    <!-- Glowing Filters -->
+    <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="pinkGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <!-- Background Rect -->
+  <rect width="100%" height="100%" fill="url(#bgGlow)" />
+
+  <!-- Technical Grid Overlay -->
+  <g opacity="0.05" stroke="#00F0FF" stroke-width="1">
+    <pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" />
+    </pattern>
+    <rect width="100%" height="100%" fill="url(#grid)" />
+  </g>
+
+  <!-- Ambient glowing blobs -->
+  <circle cx="850" cy="300" r="250" fill="#0072FF" opacity="0.1" filter="url(#cyanGlow)" />
+  <circle cx="200" cy="250" r="180" fill="#FF2E93" opacity="0.07" filter="url(#pinkGlow)" />
+
+  <!-- ==================== LEFT COLUMN: COPIOUS HEADLINES & ADVANTAGES ==================== -->
+  <g transform="translate(60, 65)">
+    
+    <!-- Top small tag -->
+    <text x="0" y="20" font-family="'Space Grotesk', 'Inter', sans-serif" font-weight="900" font-size="14" fill="#00F0FF" letter-spacing="4">THE FUTURE OF</text>
+    
+    <!-- Dynamic Large Titles -->
+    <text x="0" y="105" font-family="'Space Grotesk', 'Inter', sans-serif" font-weight="950" font-size="88" fill="url(#neonCyan)" letter-spacing="2" filter="drop-shadow(0 8px 12px rgba(0,240,255,0.15))">STREAMING</text>
+    <text x="0" y="195" font-family="'Space Grotesk', 'Inter', sans-serif" font-weight="950" font-size="95" fill="url(#neonPink)" letter-spacing="1" filter="drop-shadow(0 8px 12px rgba(255,46,147,0.15))">&amp; IPTV</text>
+    <text x="0" y="255" font-family="'Space Grotesk', 'Inter', sans-serif" font-weight="900" font-size="44" fill="#FFFFFF" letter-spacing="4">TRENDS IN 2026</text>
+
+    <!-- Subtitle -->
+    <text x="2" y="295" font-family="'Inter', sans-serif" font-weight="500" font-size="14.5" fill="#94A3B8">
+      Streaming is evolving fast. Discover the top IPTV trends shaping the future of entertainment.
+    </text>
+
+    <!-- Why IPTV is the Future Box -->
+    <g transform="translate(0, 325)">
+      <!-- Box container -->
+      <rect width="400" height="150" rx="16" fill="#090B19" stroke="#1D2545" stroke-width="1.5" />
+      <!-- Inner top accent label -->
+      <text x="200" y="28" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="13" fill="#00F0FF" letter-spacing="3" text-anchor="middle">WHY IPTV IS THE FUTURE?</text>
+      <line x1="40" y1="38" x2="360" y2="38" stroke="#1D2545" stroke-width="1" />
+
+      <!-- Horizontal grid of mini items -->
+      
+      <!-- On-Demand -->
+      <g transform="translate(15, 55)">
+        <rect width="80" height="75" rx="10" fill="#0F132C" />
+        <path d="M40 22 L48 34 L32 34 Z" fill="#00F0FF" />
+        <rect x="30" y="38" width="20" height="4" rx="1" fill="#00F0FF" />
+        <text x="40" y="55" font-family="'Inter', sans-serif" font-weight="900" font-size="8" fill="#FFFFFF" text-anchor="middle">ON-DEMAND</text>
+        <text x="40" y="65" font-family="'Inter', sans-serif" font-weight="700" font-size="7" fill="#64748B" text-anchor="middle">EVERYTHING</text>
+      </g>
+
+      <!-- Access Anywhere -->
+      <g transform="translate(110, 55)">
+        <rect width="80" height="75" rx="10" fill="#0F132C" />
+        <!-- Globe -->
+        <circle cx="40" cy="30" r="10" fill="none" stroke="#FF2E93" stroke-width="1.5" />
+        <ellipse cx="40" cy="30" rx="4" ry="10" fill="none" stroke="#FF2E93" stroke-width="1" />
+        <text x="40" y="55" font-family="'Inter', sans-serif" font-weight="900" font-size="8" fill="#FFFFFF" text-anchor="middle">ACCESS</text>
+        <text x="40" y="65" font-family="'Inter', sans-serif" font-weight="700" font-size="7" fill="#64748B" text-anchor="middle">ANYWHERE</text>
+      </g>
+
+      <!-- Multi Device -->
+      <g transform="translate(205, 55)">
+        <rect width="80" height="75" rx="10" fill="#0F132C" />
+        <!-- Screen/Phone -->
+        <rect x="32" y="22" width="16" height="12" rx="1" fill="none" stroke="#00F0FF" stroke-width="1.5" />
+        <rect x="42" y="28" width="10" height="8" rx="1" fill="#0D0E22" stroke="#00F0FF" stroke-width="1" />
+        <text x="40" y="55" font-family="'Inter', sans-serif" font-weight="900" font-size="8" fill="#FFFFFF" text-anchor="middle">MULTI-DEVICE</text>
+        <text x="40" y="65" font-family="'Inter', sans-serif" font-weight="700" font-size="7" fill="#64748B" text-anchor="middle">SUPPORT</text>
+      </g>
+
+      <!-- Cost Effective -->
+      <g transform="translate(300, 55)">
+        <rect width="85" height="75" rx="10" fill="#0F132C" />
+        <!-- Dollar bag -->
+        <circle cx="42" cy="30" r="8" fill="none" stroke="#FF2E93" stroke-width="1.5" />
+        <text x="42" y="33" font-family="'Inter', sans-serif" font-weight="900" font-size="10" fill="#FF2E93" text-anchor="middle">$</text>
+        <text x="42" y="55" font-family="'Inter', sans-serif" font-weight="900" font-size="8" fill="#FFFFFF" text-anchor="middle">COST</text>
+        <text x="42" y="65" font-family="'Inter', sans-serif" font-weight="700" font-size="7" fill="#64748B" text-anchor="middle">EFFECTIVE</text>
+      </g>
+    </g>
+
+  </g>
+
+  <!-- ==================== RIGHT COLUMN: FUTURISTIC TV DISPLAY ==================== -->
+  
+  <ellipse cx="910" cy="330" rx="220" ry="160" fill="#FF2E93" opacity="0.08" filter="url(#pinkGlow)" />
+
+  <g transform="translate(560, 95)" filter="url(#cardShadow)">
+    <!-- TV Base Stand -->
+    <path d="M 160 380 L 190 410 L 390 410 L 420 380 Z" fill="#141525" stroke="#252A4A" stroke-width="1.5" />
+    <rect x="275" y="360" width="30" height="20" fill="#090A15" stroke="#1D233C" stroke-width="1.5" />
+
+    <!-- TV Frame Bezel -->
+    <rect width="580" height="360" rx="16" fill="#0C0E1E" stroke="#1D264A" stroke-width="4" />
+    <rect x="3" y="3" width="574" height="354" rx="13" fill="none" stroke="#00F0FF" stroke-opacity="0.1" stroke-width="1" />
+
+    <!-- 8K Ultra HD Logo at TV corner -->
+    <g transform="translate(485, 18)">
+      <rect width="75" height="22" rx="4" fill="#0C132B" stroke="#00F0FF" stroke-width="1" />
+      <text x="37.5" y="14" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="11" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">8K ULTRA HD</text>
+    </g>
+
+    <text x="290" y="352" font-family="'Space Grotesk', sans-serif" font-weight="950" font-size="11" fill="#3D4D7F" letter-spacing="2" text-anchor="middle">REDSTREAM NEXTGEN</text>
+
+    <!-- TV Screen Viewport (City with movie slider UI) -->
+    <g transform="translate(10, 36)">
+      <rect width="560" height="300" rx="4" fill="url(#citySkyline)" />
+
+      <!-- Glowing skyline shapes represented programmatically in silhouette -->
+      <path d="M 0 240 L 40 180 L 60 190 L 80 140 L 110 240 L 140 150 L 170 120 L 200 240 L 260 90 L 290 140 L 340 240 L 380 100 L 410 130 L 460 240 L 510 150 L 560 240 Z" fill="#090B16" opacity="0.8" />
+      <path d="M 20 240 L 50 160 L 80 240 L 150 110 L 210 240 L 300 130 L 350 240 L 400 70 L 450 240 Z" fill="#05060E" opacity="0.9" />
+
+      <!-- Screen Glowing Neon Grid Lines in skyline -->
+      <g opacity="0.3" stroke="#00F0FF" stroke-width="0.5">
+        <line x1="260" y1="90" x2="260" y2="240" />
+        <line x1="170" y1="120" x2="170" y2="240" />
+        <line x1="380" y1="100" x2="380" y2="240" />
+      </g>
+
+      <!-- IPTV Menu navigation bar on TV -->
+      <g transform="translate(20, 20)">
+        <text x="0" y="12" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="13" fill="#FFFFFF" letter-spacing="1">IPTV</text>
+        
+        <!-- Tabs -->
+        <g transform="translate(60, 2)" font-family="'Inter', sans-serif" font-weight="bold" font-size="8" fill="#A0AEC0">
+          <text x="0" y="8" fill="#FF2E93">Home</text>
+          <text x="35" y="8">Live TV</text>
+          <text x="75" y="8">Movies</text>
+          <text x="115" y="8">Series</text>
+          <text x="155" y="8">Sports</text>
+          <text x="195" y="8">Settings</text>
+        </g>
+
+        <!-- Right time -->
+        <text x="500" y="10" font-family="'Inter', sans-serif" font-weight="bold" font-size="8" fill="#A0AEC0">12:45 PM</text>
+      </g>
+
+      <!-- TV Big Headline overlay -->
+      <g transform="translate(20, 75)">
+        <text x="0" y="20" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="20" fill="#FFFFFF">THE FUTURE</text>
+        <text x="0" y="42" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="20" fill="#00F0FF">IS STREAMING</text>
+        <text x="0" y="75" font-family="'Space Grotesk', sans-serif" font-weight="950" font-size="36" fill="url(#neonPink)">2026</text>
+      </g>
+
+      <!-- Horizontal Movie Slider list at bottom -->
+      <g transform="translate(20, 175)">
+        <text x="0" y="10" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="9" fill="#FFFFFF" letter-spacing="1">RECOMMENDED FOR YOU</text>
+        
+        <!-- Movie thumbnails -->
+        <!-- Thumbnail 1 -->
+        <g transform="translate(0, 20)">
+          <rect width="100" height="60" rx="6" fill="#131B2E" stroke="#FF2E93" stroke-width="1" />
+          <text x="50" y="35" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="8" fill="#FFFFFF" text-anchor="middle">STRANGER THINGS</text>
+        </g>
+        <!-- Thumbnail 2 -->
+        <g transform="translate(110, 20)">
+          <rect width="100" height="60" rx="6" fill="#131B2E" stroke="#252F48" stroke-width="1" />
+          <text x="50" y="35" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="8" fill="#A0AEC0" text-anchor="middle">LAST OF US</text>
+        </g>
+        <!-- Thumbnail 3 -->
+        <g transform="translate(220, 20)">
+          <rect width="100" height="60" rx="6" fill="#131B2E" stroke="#252F48" stroke-width="1" />
+          <text x="50" y="35" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="8" fill="#A0AEC0" text-anchor="middle">AVATAR 3</text>
+        </g>
+        <!-- Thumbnail 4 -->
+        <g transform="translate(330, 20)">
+          <rect width="100" height="60" rx="6" fill="#131B2E" stroke="#252F48" stroke-width="1" />
+          <text x="50" y="35" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="8" fill="#A0AEC0" text-anchor="middle">SPIDER-MAN</text>
+        </g>
+        <!-- Thumbnail 5 -->
+        <g transform="translate(440, 20)">
+          <rect width="80" height="60" rx="6" fill="#131B2E" stroke="#252F48" stroke-width="1" />
+          <text x="40" y="35" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="8" fill="#A0AEC0" text-anchor="middle">BATMAN</text>
+        </g>
+      </g>
+
+    </g>
+  </g>
+
+  <!-- Interactive Smart Speaker sitting on shelf near TV -->
+  <g transform="translate(510, 395)" filter="url(#cardShadow)">
+    <rect width="32" height="70" rx="8" fill="#151520" stroke="#222" stroke-width="2" />
+    <ellipse cx="16" cy="5" rx="14" ry="4" fill="#00D2FF" filter="url(#cyanGlow)" />
+    <!-- Grill lines -->
+    <line x1="6" y1="20" x2="26" y2="20" stroke="#333" stroke-width="1" />
+    <line x1="6" y1="30" x2="26" y2="30" stroke="#333" stroke-width="1" />
+    <line x1="6" y1="40" x2="26" y2="40" stroke="#333" stroke-width="1" />
+    <line x1="6" y1="50" x2="26" y2="50" stroke="#333" stroke-width="1" />
+  </g>
+
+  <!-- Bowl of Popcorn sitting next to speaker -->
+  <g transform="translate(460, 435)">
+    <!-- Bowl -->
+    <path d="M 0 0 C 0 20 40 20 40 0 Z" fill="#D60A13" stroke="#222" stroke-width="1.5" />
+    <!-- Yellow fluffy popcorn circles inside -->
+    <circle cx="10" cy="-5" r="5" fill="#FFE066" />
+    <circle cx="20" cy="-7" r="6" fill="#FFF2B2" />
+    <circle cx="30" cy="-4" r="5" fill="#FFE066" />
+    <circle cx="15" cy="-2" r="5" fill="#FFE066" />
+    <circle cx="25" cy="-3" r="5" fill="#FFF2B2" />
+  </g>
+
+  <!-- Wooden Shelf support bar -->
+  <rect x="420" y="460" width="720" height="15" fill="#0A0B12" stroke="#1D233C" stroke-width="1.5" rx="3" />
+
+  <!-- ==================== TOP IPTV & STREAMING TRENDS IN 2026 GRID ==================== -->
+  
+  <g transform="translate(40, 520)">
+    
+    <!-- Title -->
+    <text x="560" y="0" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="18" fill="#FFFFFF" text-anchor="middle" letter-spacing="3">TOP IPTV &amp; STREAMING TRENDS IN 2026</text>
+    <line x1="360" y1="12" x2="760" y2="12" stroke="url(#neonCyan)" stroke-width="2" opacity="0.8" />
+
+    <!-- 7 Bento Cards grid -->
+    <!-- Card 1: 8K & 4K Streaming -->
+    <g transform="translate(0, 35)" filter="url(#cardShadow)">
+      <rect width="145" height="160" rx="14" fill="#090B19" stroke="#1D2545" stroke-width="1.5" />
+      <rect x="2" y="2" width="141" height="156" rx="12" fill="none" stroke="#FF2E93" stroke-opacity="0.1" stroke-width="1.5" />
+      
+      <!-- Icon -->
+      <circle cx="72.5" cy="45" r="22" fill="#181326" stroke="#FF2E93" stroke-width="1.5" />
+      <rect x="58.5" y="34.5" width="28" height="21" rx="3" fill="none" stroke="#FF2E93" stroke-width="2" />
+      <text x="72.5" y="48" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="10" fill="#FF2E93" text-anchor="middle">8K</text>
+
+      <text x="72.5" y="95" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="12" fill="#FFFFFF" text-anchor="middle">8K &amp; 4K STREAMING</text>
+      <text x="72.5" y="115" font-family="'Inter', sans-serif" font-weight="500" font-size="9" fill="#64748B" text-anchor="middle">Ultra-high definition</text>
+      <text x="72.5" y="128" font-family="'Inter', sans-serif" font-weight="500" font-size="9" fill="#64748B" text-anchor="middle">becomes standard.</text>
+    </g>
+
+    <!-- Card 2: AI Recommendations -->
+    <g transform="translate(160, 35)" filter="url(#cardShadow)">
+      <rect width="150" height="160" rx="14" fill="#090B19" stroke="#1D2545" stroke-width="1.5" />
+      <rect x="2" y="2" width="146" height="156" rx="12" fill="none" stroke="#00F0FF" stroke-opacity="0.1" stroke-width="1.5" />
+      
+      <!-- Icon -->
+      <circle cx="75" cy="45" r="22" fill="#0D1E2D" stroke="#00F0FF" stroke-width="1.5" />
+      <rect x="62" y="35" width="26" height="20" rx="3" fill="none" stroke="#00F0FF" stroke-width="2" />
+      <text x="75" y="48" font-family="'Space Grotesk', sans-serif" font-weight="950" font-size="10" fill="#00F0FF" text-anchor="middle">AI</text>
+
+      <text x="75" y="95" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="12" fill="#FFFFFF" text-anchor="middle">AI-RECOMMENDATIONS</text>
+      <text x="75" y="115" font-family="'Inter', sans-serif" font-weight="500" font-size="9" fill="#64748B" text-anchor="middle">Smarter algorithms</text>
+      <text x="75" y="128" font-family="'Inter', sans-serif" font-weight="500" font-size="9" fill="#64748B" text-anchor="middle">deliver custom feeds.</text>
+    </g>
+
+    <!-- Card 3: Cloud-Based IPTV -->
+    <g transform="translate(325, 35)" filter="url(#cardShadow)">
+      <rect width="150" height="160" rx="14" fill="#090B19" stroke="#1D2545" stroke-width="1.5" />
+      
+      <!-- Icon -->
+      <circle cx="75" cy="45" r="22" fill="#181326" stroke="#FF2E93" stroke-width="1.5" />
+      <path d="M63 48 C63 40 70 34 77 36 C80 34 85 36 86 40 C89 40 91 43 90 46 C90 48 88 49 85 49 L66 49" fill="none" stroke="#FF2E93" stroke-width="2" />
+
+      <text x="75" y="95" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="12" fill="#FFFFFF" text-anchor="middle">CLOUD-BASED IPTV</text>
+      <text x="75" y="115" font-family="'Inter', sans-serif" font-weight="500" font-size="9" fill="#64748B" text-anchor="middle">More stable, cloud</text>
+      <text x="75" y="128" font-family="'Inter', sans-serif" font-weight="500" font-size="9" fill="#64748B" text-anchor="middle">hosted stream nodes.</text>
+    </g>
+
+    <!-- Card 4: Multi-Screen Everywhere -->
+    <g transform="translate(490, 35)" filter="url(#cardShadow)">
+      <rect width="150" height="160" rx="14" fill="#090B19" stroke="#1D2545" stroke-width="1.5" />
+      
+      <!-- Icon -->
+      <circle cx="75" cy="45" r="22" fill="#0D1E2D" stroke="#00F0FF" stroke-width="1.5" />
+      <rect x="62" y="34" width="16" height="12" rx="1" fill="none" stroke="#00F0FF" stroke-width="1.5" />
+      <rect x="73" y="42" width="12" height="10" rx="1" fill="#0D1E2D" stroke="#00F0FF" stroke-width="1.5" />
+
+      <text x="75" y="95" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="12" fill="#FFFFFF" text-anchor="middle">MULTI-SCREEN TECH</text>
+      <text x="75" y="115" font-family="'Inter', sans-serif" font-weight="500" font-size="9" fill="#64748B" text-anchor="middle">Watch on smartphone</text>
+      <text x="75" y="128" font-family="'Inter', sans-serif" font-weight="500" font-size="9" fill="#64748B" text-anchor="middle">TV &amp; Tablet at once.</text>
+    </g>
+
+    <!-- Card 5: Cybersecurity & Privacy -->
+    <g transform="translate(655, 35)" filter="url(#cardShadow)">
+      <rect width="150" height="160" rx="14" fill="#090B19" stroke="#1D2545" stroke-width="1.5" />
+      
+      <!-- Icon -->
+      <circle cx="75" cy="45" r="22" fill="#181326" stroke="#FF2E93" stroke-width="1.5" />
+      <polygon points="75 32, 85 36, 85 46, 75 52, 65 46, 65 36" fill="none" stroke="#FF2E93" stroke-width="2" />
+
+      <text x="75" y="95" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="12" fill="#FFFFFF" text-anchor="middle">CYBERSECURITY</text>
+      <text x="75" y="115" font-family="'Inter', sans-serif" font-weight="500" font-size="9" fill="#64748B" text-anchor="middle">Encrypted feeds keep</text>
+      <text x="75" y="128" font-family="'Inter', sans-serif" font-weight="500" font-size="9" fill="#64748B" text-anchor="middle">your identity fully safe.</text>
+    </g>
+
+    <!-- Card 6: Live Sports & Events -->
+    <g transform="translate(820, 35)" filter="url(#cardShadow)">
+      <rect width="145" height="160" rx="14" fill="#090B19" stroke="#1D2545" stroke-width="1.5" />
+      
+      <!-- Icon -->
+      <circle cx="72.5" cy="45" r="22" fill="#0D1E2D" stroke="#00F0FF" stroke-width="1.5" />
+      <!-- Wi-Fi signal/Sound -->
+      <path d="M62.5 45 A10 10 0 0 1 82.5 45" fill="none" stroke="#00F0FF" stroke-width="2" />
+      <circle cx="72.5" cy="45" r="3" fill="#00F0FF" />
+
+      <text x="72.5" y="95" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="12" fill="#FFFFFF" text-anchor="middle">LIVE SPORTS &amp; VOD</text>
+      <text x="72.5" y="115" font-family="'Inter', sans-serif" font-weight="500" font-size="9" fill="#64748B" text-anchor="middle">Real-time low latency</text>
+      <text x="72.5" y="128" font-family="'Inter', sans-serif" font-weight="500" font-size="9" fill="#64748B" text-anchor="middle">global events feed.</text>
+    </g>
+
+    <!-- Card 7: 5G & Fast Internet -->
+    <g transform="translate(980, 35)" filter="url(#cardShadow)">
+      <rect width="140" height="160" rx="14" fill="#090B19" stroke="#1D2545" stroke-width="1.5" />
+      
+      <!-- Icon -->
+      <circle cx="70" cy="45" r="22" fill="#181326" stroke="#FF2E93" stroke-width="1.5" />
+      <!-- Rocket -->
+      <path d="M65 50 L75 40 L70 35 L60 45 Z" fill="none" stroke="#FF2E93" stroke-width="2" />
+      <line x1="57" y1="53" x2="62" y2="48" stroke="#FF2E93" stroke-width="2" />
+
+      <text x="70" y="95" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="11" fill="#FFFFFF" text-anchor="middle">5G &amp; FAST INTERNET</text>
+      <text x="70" y="115" font-family="'Inter', sans-serif" font-weight="500" font-size="9" fill="#64748B" text-anchor="middle">High speeds yield</text>
+      <text x="70" y="128" font-family="'Inter', sans-serif" font-weight="500" font-size="9" fill="#64748B" text-anchor="middle">smooth buffering-free load.</text>
+    </g>
+
+  </g>
+
+  <!-- ==================== FOOTER CAPSULE ROW ==================== -->
+  
+  <g transform="translate(325, 742)">
+    <rect width="550" height="34" rx="17" fill="#0B0C1E" stroke="#1F2344" stroke-width="1" />
+    <circle cx="22" cy="17" r="6" fill="#00F0FF" />
+    <!-- Pulse ring -->
+    <circle cx="22" cy="17" r="10" fill="none" stroke="#00F0FF" stroke-opacity="0.4" stroke-width="1" />
+    <text x="38" y="21" font-family="'Inter', sans-serif" font-weight="700" font-size="11.5" fill="#94A3B8">
+      THE FUTURE IS HERE.  |  Better Quality. More Choices. Smarter Streaming.  |  2026
+    </text>
+  </g>
+
+</svg>

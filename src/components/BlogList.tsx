@@ -47,6 +47,18 @@ export default function BlogList({ posts, lang, t, onNavigate }: BlogListProps) 
     <div className="min-h-screen bg-[#0a0a0a] text-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         
+        {/* Brand Logo Banner */}
+        <div className="w-full flex justify-center mb-10">
+          <div className="w-full max-w-xl aspect-[16/10] sm:aspect-[16/9] bg-[#141414] rounded-2xl overflow-hidden border border-white/5 shadow-2xl shadow-[#FF1E27]/5">
+            <img 
+              src="/redstream_blog_cover.svg" 
+              alt="RedStream™ Blog Logo" 
+              referrerPolicy="no-referrer"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
         {/* Header Title */}
         <div className="text-center mb-12">
           <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-white mb-4">
@@ -115,10 +127,12 @@ export default function BlogList({ posts, lang, t, onNavigate }: BlogListProps) 
           {filteredPosts.map(post => {
             // Find Cover Image or fallback to standard coverImagePath
             const coverImage = post.slug.includes('samsung') 
-              ? '/1000148211-iptv-france.webp' 
+              ? '/samsung_iptv_guide.svg' 
               : post.slug.includes('setup')
-              ? '/1000148213-iptv-france.webp'
-              : '/1000148230-iptv-france.webp';
+              ? '/ultimate_iptv_setup_guide.svg'
+              : post.slug.includes('future')
+              ? '/future_streaming_trends_2026.svg'
+              : '/redstream_blog_cover.svg';
 
             return (
               <article 

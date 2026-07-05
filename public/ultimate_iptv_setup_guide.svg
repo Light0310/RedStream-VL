@@ -1,0 +1,457 @@
+<svg viewBox="0 0 1200 800" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bgGlow" cx="75%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#210305" />
+      <stop offset="60%" stop-color="#080001" />
+      <stop offset="100%" stop-color="#020000" />
+    </radialGradient>
+    
+    <!-- Red Metallic Gradient -->
+    <linearGradient id="redMetallic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF3E47" />
+      <stop offset="50%" stop-color="#D60A13" />
+      <stop offset="100%" stop-color="#800005" />
+    </linearGradient>
+
+    <!-- Silver Metallic Gradient -->
+    <linearGradient id="silverMetallic" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#D1D1D1" />
+      <stop offset="100%" stop-color="#8A8A8A" />
+    </linearGradient>
+
+    <!-- TV Screen Gradients -->
+    <linearGradient id="tvLiveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00B4DB" />
+      <stop offset="100%" stop-color="#0083B0" />
+    </linearGradient>
+
+    <linearGradient id="tvMoviesGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F857A6" />
+      <stop offset="100%" stop-color="#FF5858" />
+    </linearGradient>
+
+    <linearGradient id="tvSeriesGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a8c0ff" />
+      <stop offset="100%" stop-color="#3f2b96" />
+    </linearGradient>
+
+    <linearGradient id="goldButtonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE000" />
+      <stop offset="100%" stop-color="#799F0C" />
+    </linearGradient>
+
+    <!-- Shadow & Glow Filters -->
+    <filter id="neonRedGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="25" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="tvGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feColorMatrix type="matrix" values="1 0 0 0 1  0 0 0 0 0  0 0 0 0 0  0 0 0 0.4 0" />
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="boxShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000000" flood-opacity="0.7" />
+    </filter>
+  </defs>
+
+  <!-- Base Background -->
+  <rect width="100%" height="100%" fill="url(#bgGlow)" />
+
+  <!-- Background Grid Lines for Technical Feeling -->
+  <g opacity="0.05" stroke="#FFFFFF" stroke-width="1">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" />
+    </pattern>
+    <rect width="100%" height="100%" fill="url(#grid)" />
+  </g>
+
+  <!-- Red Ambient Light Stream (Left & Right margins) -->
+  <path d="M-100 0 L300 0 L150 800 L-100 800 Z" fill="#FF1E27" opacity="0.07" filter="url(#neonRedGlow)" />
+  <path d="M1300 100 L950 800 L1300 800 Z" fill="#FF1E27" opacity="0.08" filter="url(#neonRedGlow)" />
+
+  <!-- ==================== LEFT SIDE: TEXT & PROCESS ==================== -->
+  <g transform="translate(60, 80)">
+    
+    <!-- Red Accent Top Bar -->
+    <rect x="0" y="0" width="80" height="6" fill="url(#redMetallic)" rx="3" />
+    
+    <!-- Title Section -->
+    <text x="0" y="45" font-family="'Space Grotesk', 'Inter', sans-serif" font-weight="900" font-size="46" fill="#FFFFFF" letter-spacing="1.5">ULTIMATE</text>
+    <text x="0" y="140" font-family="'Space Grotesk', 'Inter', sans-serif" font-weight="950" font-size="110" fill="url(#redMetallic)" letter-spacing="3" filter="drop-shadow(0px 15px 15px rgba(214, 10, 19, 0.35))">IPTV</text>
+    <text x="5" y="200" font-family="'Space Grotesk', 'Inter', sans-serif" font-weight="900" font-size="46" fill="#FFFFFF" letter-spacing="1">SETUP GUIDE</text>
+    
+    <!-- Divider Line -->
+    <line x1="5" y1="225" x2="480" y2="225" stroke="#FF1E27" stroke-width="3" opacity="0.8" />
+    
+    <!-- Subtitle -->
+    <text x="5" y="255" font-family="'Inter', sans-serif" font-weight="600" font-size="18" fill="#E2E8F0" opacity="0.9">
+      Step-by-Step Setup for the Best Streaming Experience
+    </text>
+
+    <!-- Key Badges Grid (Live TV, Movies, HD & 4K, Easy Setup) -->
+    <g transform="translate(5, 290)">
+      
+      <!-- Live TV Badge -->
+      <g transform="translate(0, 0)">
+        <circle cx="25" cy="25" r="22" fill="#1A1112" stroke="#FF1E27" stroke-width="1.5" />
+        <!-- TV Icon -->
+        <rect x="15" y="17" width="20" height="15" rx="2" fill="none" stroke="#FF3E47" stroke-width="2" />
+        <line x1="20" y1="17" x2="16" y2="12" stroke="#FF3E47" stroke-width="2" />
+        <line x1="30" y1="17" x2="34" y2="12" stroke="#FF3E47" stroke-width="2" />
+        <text x="60" y="23" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="15" fill="#FFFFFF">LIVE TV</text>
+        <text x="60" y="38" font-family="'Inter', sans-serif" font-weight="normal" font-size="11" fill="#A0AEC0">Instant Streams</text>
+      </g>
+
+      <!-- Movies Badge -->
+      <g transform="translate(240, 0)">
+        <circle cx="25" cy="25" r="22" fill="#1A1112" stroke="#FF1E27" stroke-width="1.5" />
+        <!-- Film Reel Icon -->
+        <circle cx="25" cy="25" r="9" fill="none" stroke="#FF3E47" stroke-width="2" />
+        <circle cx="25" cy="20" r="2" fill="#FF3E47" />
+        <circle cx="25" cy="30" r="2" fill="#FF3E47" />
+        <circle cx="20" cy="25" r="2" fill="#FF3E47" />
+        <circle cx="30" cy="25" r="2" fill="#FF3E47" />
+        <text x="60" y="23" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="15" fill="#FFFFFF">MOVIES</text>
+        <text x="60" y="38" font-family="'Inter', sans-serif" font-weight="normal" font-size="11" fill="#A0AEC0">60K+ VOD Titles</text>
+      </g>
+
+      <!-- HD & 4K Badge -->
+      <g transform="translate(0, 75)">
+        <circle cx="25" cy="25" r="22" fill="#1A1112" stroke="#FF1E27" stroke-width="1.5" />
+        <!-- 4K Icon -->
+        <rect x="13" y="16" width="24" height="16" rx="2" fill="none" stroke="#FF3E47" stroke-width="1.5" />
+        <text x="25" y="27" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="9" fill="#FF3E47" text-anchor="middle">4K</text>
+        <text x="60" y="23" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="15" fill="#FFFFFF">ULTRA HD</text>
+        <text x="60" y="38" font-family="'Inter', sans-serif" font-weight="normal" font-size="11" fill="#A0AEC0">Crisp 4K Clustered</text>
+      </g>
+
+      <!-- Easy Setup Badge -->
+      <g transform="translate(240, 75)">
+        <circle cx="25" cy="25" r="22" fill="#1A1112" stroke="#FF1E27" stroke-width="1.5" />
+        <!-- Gear Icon -->
+        <circle cx="25" cy="25" r="5" fill="none" stroke="#FF3E47" stroke-width="2" />
+        <path d="M25 15 L25 18 M25 32 L25 35 M15 25 L18 25 M32 25 L35 25 M18 18 L20 20 M30 30 L32 32 M18 32 L20 30 M30 18 L32 20" stroke="#FF3E47" stroke-width="2" />
+        <text x="60" y="23" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="15" fill="#FFFFFF">EASY SETUP</text>
+        <text x="60" y="38" font-family="'Inter', sans-serif" font-weight="normal" font-size="11" fill="#A0AEC0">Takes 10 Minutes</text>
+      </g>
+    </g>
+
+    <!-- Steps Progress Bar (Horizontal 1-2-3 list) -->
+    <g transform="translate(5, 490)">
+      <rect x="0" y="0" width="480" height="140" fill="#0C0405" rx="16" stroke="#2D0B0E" stroke-width="1.5" />
+      
+      <!-- Step 1 -->
+      <g transform="translate(25, 25)">
+        <circle cx="25" cy="25" r="20" fill="url(#redMetallic)" />
+        <path d="M21 21 L25 25 L29 21 M25 15 L25 25" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+        <line x1="17" y1="29" x2="33" y2="29" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
+        
+        <text x="0" y="65" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="14" fill="#FF3E47">1. INSTALL</text>
+        <text x="0" y="82" font-family="'Inter', sans-serif" font-weight="bold" font-size="12" fill="#FFFFFF">Choose App</text>
+        <text x="0" y="96" font-family="'Inter', sans-serif" font-weight="normal" font-size="10" fill="#A0AEC0">Smarters, XC, etc.</text>
+      </g>
+
+      <!-- Step Connection Arrow 1 -->
+      <g transform="translate(145, 45)" stroke="#FF1E27" stroke-width="2" fill="none" opacity="0.6">
+        <path d="M0 0 L15 5 L0 10" />
+        <path d="M10 0 L25 5 L10 10" />
+      </g>
+
+      <!-- Step 2 -->
+      <g transform="translate(195, 25)">
+        <circle cx="25" cy="25" r="20" fill="url(#redMetallic)" />
+        <!-- Config Playlist Icon -->
+        <rect x="17" y="17" width="16" height="16" rx="2" fill="none" stroke="#FFFFFF" stroke-width="2" />
+        <line x1="21" y1="21" x2="29" y2="21" stroke="#FFFFFF" stroke-width="2" />
+        <line x1="21" y1="25" x2="29" y2="25" stroke="#FFFFFF" stroke-width="2" />
+        <line x1="21" y1="29" x2="25" y2="29" stroke="#FFFFFF" stroke-width="2" />
+
+        <text x="0" y="65" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="14" fill="#FF3E47">2. CONFIG</text>
+        <text x="0" y="82" font-family="'Inter', sans-serif" font-weight="bold" font-size="12" fill="#FFFFFF">Add Playlist</text>
+        <text x="0" y="96" font-family="'Inter', sans-serif" font-weight="normal" font-size="10" fill="#A0AEC0">M3U or Xtream API</text>
+      </g>
+
+      <!-- Step Connection Arrow 2 -->
+      <g transform="translate(315, 45)" stroke="#FF1E27" stroke-width="2" fill="none" opacity="0.6">
+        <path d="M0 0 L15 5 L0 10" />
+        <path d="M10 0 L25 5 L10 10" />
+      </g>
+
+      <!-- Step 3 -->
+      <g transform="translate(365, 25)">
+        <circle cx="25" cy="25" r="20" fill="url(#redMetallic)" />
+        <!-- Wifi Stream Icon -->
+        <path d="M15 22 A12 12 0 0 1 35 22 M18 26 A8 8 0 0 1 32 26 M21 30 A4 4 0 0 1 29 30" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" />
+        <circle cx="25" cy="33" r="1.5" fill="#FFFFFF" />
+
+        <text x="0" y="65" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="14" fill="#FF3E47">3. CONNECT</text>
+        <text x="0" y="82" font-family="'Inter', sans-serif" font-weight="bold" font-size="12" fill="#FFFFFF">Stream 4K</text>
+        <text x="0" y="96" font-family="'Inter', sans-serif" font-weight="normal" font-size="10" fill="#A0AEC0">Smooth &amp; Stable</text>
+      </g>
+    </g>
+
+  </g>
+
+  <!-- ==================== RIGHT SIDE: SMART TV & STREAMING HARDWARE ==================== -->
+  
+  <!-- Sleek TV Glow Background -->
+  <ellipse cx="900" cy="350" rx="220" ry="160" fill="#D60A13" opacity="0.15" filter="url(#neonRedGlow)" />
+
+  <!-- The TV Unit -->
+  <g transform="translate(600, 100)" filter="url(#tvGlow)">
+    
+    <!-- TV Base / Stand -->
+    <path d="M 120 460 L 160 495 L 420 495 L 460 460 Z" fill="#151515" stroke="#252525" stroke-width="2" />
+    <rect x="275" y="440" width="30" height="30" fill="#0F0F0F" stroke="#1D1D1D" stroke-width="2" />
+    
+    <!-- TV Outer Bezel Frame -->
+    <rect x="0" y="0" width="580" height="440" rx="12" fill="#0B0B0C" stroke="#222224" stroke-width="4" filter="url(#boxShadow)" />
+    <!-- TV Metallic Inner Bezel -->
+    <rect x="4" y="4" width="572" height="432" rx="8" fill="none" stroke="#1A1A1D" stroke-width="2" />
+
+    <!-- TV Screen Contents (IPTV Smarters Pro Layout) -->
+    <g transform="translate(10, 10)">
+      <rect x="0" y="0" width="560" height="420" rx="6" fill="#0B0E14" />
+      
+      <!-- Deep Blue Screen Glow -->
+      <rect x="0" y="0" width="560" height="420" rx="6" fill="#141E30" opacity="0.4" />
+      
+      <!-- IPTV Smarters Header Bar -->
+      <g transform="translate(20, 25)">
+        <!-- Logo -->
+        <text x="0" y="16" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="16" fill="#FFFFFF" letter-spacing="1">IPTV</text>
+        <text x="0" y="28" font-family="'Inter', sans-serif" font-weight="900" font-size="10" fill="#FF242B" letter-spacing="3">SMARTERS</text>
+        
+        <!-- Status Date / Time -->
+        <text x="140" y="16" font-family="'Inter', sans-serif" font-weight="600" font-size="9" fill="#A0AEC0">10:45 AM  June 15, 2024</text>
+        
+        <!-- Smart Search & Profile Icons (Right aligned in TV coordinate space) -->
+        <g transform="translate(390, 2)">
+          <!-- Search Magnifier -->
+          <circle cx="10" cy="10" r="5" fill="none" stroke="#A0AEC0" stroke-width="1.5" />
+          <line x1="14" y1="14" x2="19" y2="19" stroke="#A0AEC0" stroke-width="1.5" />
+          <text x="25" y="13" font-family="'Inter', sans-serif" font-weight="600" font-size="9" fill="#A0AEC0">Master Search</text>
+
+          <!-- Notification Bell -->
+          <path d="M125 6 A4 4 0 0 1 131 10 L132 14 L122 14 L123 10 A4 4 0 0 1 125 6 Z" fill="none" stroke="#A0AEC0" stroke-width="1.5" />
+          <circle cx="127" cy="16" r="1.5" fill="#FF1E27" />
+
+          <!-- User Icon -->
+          <circle cx="155" cy="9" r="4.5" fill="none" stroke="#A0AEC0" stroke-width="1.5" />
+          <path d="M149 18 C149 15 152 14 155 14 C158 14 161 15 161 18 Z" fill="none" stroke="#A0AEC0" stroke-width="1.5" />
+        </g>
+      </g>
+
+      <!-- Core TV Navigation Cards -->
+      <g transform="translate(20, 85)">
+        
+        <!-- LIVE TV Grid Card -->
+        <g transform="translate(0, 0)">
+          <rect x="0" y="0" width="165" height="200" rx="14" fill="url(#tvLiveGrad)" filter="url(#boxShadow)" />
+          <!-- Accent Inner Glow Line -->
+          <rect x="2" y="2" width="161" height="196" rx="12" fill="none" stroke="#FFFFFF" stroke-opacity="0.15" stroke-width="1.5" />
+          <!-- Center TV Icon -->
+          <g transform="translate(82, 85)">
+            <circle cx="0" cy="0" r="28" fill="#FFFFFF" fill-opacity="0.15" />
+            <rect x="-18" y="-12" width="36" height="24" rx="4" fill="none" stroke="#FFFFFF" stroke-width="2.5" />
+            <circle cx="-10" cy="-6" r="1.5" fill="#FFFFFF" />
+            <circle cx="0" cy="0" r="4" fill="none" stroke="#FFFFFF" stroke-width="2" />
+          </g>
+          <text x="82" y="165" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="18" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">LIVE TV</text>
+        </g>
+
+        <!-- MOVIES Grid Card -->
+        <g transform="translate(180, 0)">
+          <rect x="0" y="0" width="165" height="200" rx="14" fill="url(#tvMoviesGrad)" filter="url(#boxShadow)" />
+          <rect x="2" y="2" width="161" height="196" rx="12" fill="none" stroke="#FFFFFF" stroke-opacity="0.15" stroke-width="1.5" />
+          <!-- Play Icon -->
+          <g transform="translate(82, 85)">
+            <circle cx="0" cy="0" r="28" fill="#FFFFFF" fill-opacity="0.15" />
+            <polygon points="-8 -15, 14 0, -8 15" fill="#FFFFFF" />
+          </g>
+          <text x="82" y="165" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="18" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">MOVIES</text>
+        </g>
+
+        <!-- SERIES Grid Card -->
+        <g transform="translate(360, 0)">
+          <rect x="0" y="0" width="160" height="200" rx="14" fill="url(#tvSeriesGrad)" filter="url(#boxShadow)" />
+          <rect x="2" y="2" width="156" height="196" rx="12" fill="none" stroke="#FFFFFF" stroke-opacity="0.15" stroke-width="1.5" />
+          <!-- Series Icon -->
+          <g transform="translate(80, 85)">
+            <circle cx="0" cy="0" r="28" fill="#FFFFFF" fill-opacity="0.15" />
+            <!-- Clapperboard -->
+            <polygon points="-16 -12, 16 -12, 16 -3, -16 -3" fill="#FFFFFF" />
+            <rect x="-16" y="1" width="32" height="14" rx="1" fill="none" stroke="#FFFFFF" stroke-width="2" />
+            <line x1="-12" y1="-12" x2="-8" y2="-3" stroke="#000000" stroke-width="2" />
+            <line x1="-2" y1="-12" x2="2" y2="-3" stroke="#000000" stroke-width="2" />
+            <line x1="8" y1="-12" x2="12" y2="-3" stroke="#000000" stroke-width="2" />
+          </g>
+          <text x="80" y="165" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="18" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">SERIES</text>
+        </g>
+      </g>
+
+      <!-- Bottom mini menu buttons -->
+      <g transform="translate(20, 310)">
+        
+        <!-- Live with EPG -->
+        <g transform="translate(0, 0)">
+          <rect x="0" y="0" width="105" height="30" rx="6" fill="#1C2D37" stroke="#319795" stroke-width="1" />
+          <text x="12" y="18" font-family="'Inter', sans-serif" font-weight="800" font-size="10" fill="#4FD1C5">EPG</text>
+          <text x="40" y="18" font-family="'Inter', sans-serif" font-weight="700" font-size="8" fill="#E2E8F0">LIVE WITH EPG</text>
+        </g>
+
+        <!-- Multi-Screen -->
+        <g transform="translate(115, 0)">
+          <rect x="0" y="0" width="105" height="30" rx="6" fill="#202A36" stroke="#4A5568" stroke-width="1" />
+          <!-- Grid Icon -->
+          <rect x="10" y="8" width="6" height="6" fill="none" stroke="#A0AEC0" stroke-width="1" />
+          <rect x="18" y="8" width="6" height="6" fill="none" stroke="#A0AEC0" stroke-width="1" />
+          <rect x="10" y="16" width="6" height="6" fill="none" stroke="#A0AEC0" stroke-width="1" />
+          <rect x="18" y="16" width="6" height="6" fill="none" stroke="#A0AEC0" stroke-width="1" />
+          <text x="32" y="18" font-family="'Inter', sans-serif" font-weight="700" font-size="8" fill="#E2E8F0">MULTI-SCREEN</text>
+        </g>
+
+        <!-- Catch Up -->
+        <g transform="translate(230, 0)">
+          <rect x="0" y="0" width="95" height="30" rx="6" fill="#1C2D22" stroke="#38A169" stroke-width="1" />
+          <!-- Clockwise Arrow -->
+          <path d="M12 15 A4 4 0 1 1 18 18" fill="none" stroke="#48BB78" stroke-width="1.5" />
+          <polygon points="17 18, 20 16, 17 14" fill="#48BB78" />
+          <text x="28" y="18" font-family="'Inter', sans-serif" font-weight="700" font-size="8" fill="#E2E8F0">CATCH UP</text>
+        </g>
+
+        <!-- TV Status / Buy Premium Banner on the far bottom right -->
+        <g transform="translate(345, -3)">
+          <text x="0" y="12" font-family="'Inter', sans-serif" font-weight="bold" font-size="10" fill="#A0AEC0">Expiration:</text>
+          <text x="62" y="12" font-family="'Inter', sans-serif" font-weight="900" font-size="10" fill="#48BB78">Unlimited Plan</text>
+
+          <!-- Buy Premium Badge -->
+          <g transform="translate(0, 18)">
+            <rect x="0" y="0" width="175" height="22" rx="4" fill="url(#goldButtonGrad)" />
+            <!-- Cart Icon -->
+            <path d="M10 5 L14 5 L16 13 L24 13 L26 7 L12 7" fill="none" stroke="#111" stroke-width="1.5" />
+            <circle cx="17" cy="18" r="1.5" fill="#111" />
+            <circle cx="23" cy="18" r="1.5" fill="#111" />
+            <text x="36" y="15" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="9" fill="#111111" letter-spacing="0.5">ORDER ACTIVE STREAM</text>
+          </g>
+        </g>
+      </g>
+
+    </g>
+  </g>
+
+  <!-- ==================== FRONT ELEMENTS: MAG BOX, FIRE STICK, MOBILE, REMOTES ==================== -->
+  
+  <!-- Sleek Wooden Table / Shelf surface at bottom -->
+  <rect x="520" y="580" width="650" height="25" fill="#0D0D0E" stroke="#222" stroke-width="1.5" rx="4" filter="url(#boxShadow)" />
+  <rect x="530" y="605" width="630" height="150" fill="#040405" opacity="0.9" />
+
+  <!-- 1. MAG Box (Sleek Rounded Square Box sitting on table) -->
+  <g transform="translate(560, 530)" filter="url(#boxShadow)">
+    <!-- 3D Side extrusion -->
+    <path d="M 0 45 L 180 45 L 195 70 L 15 70 Z" fill="#0A0A0B" />
+    <path d="M 180 0 L 180 45 L 195 70 L 195 25 Z" fill="#121215" />
+    <!-- Top Face -->
+    <path d="M 15 0 L 180 0 C 188 0 195 10 180 25 L 15 45 C 5 45 0 35 15 0 Z" fill="#18181B" stroke="#2D2D30" stroke-width="1" />
+    <!-- Glowing Front Blue LED -->
+    <ellipse cx="90" cy="58" rx="8" ry="2" fill="#00D2FF" filter="url(#neonRedGlow)" opacity="0.8" />
+    <circle cx="90" cy="58" r="1.5" fill="#FFFFFF" />
+    <!-- "MAG" Text on box -->
+    <text x="90" y="28" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="16" fill="#4B4B4F" text-anchor="middle" letter-spacing="2">MAG</text>
+    <text x="90" y="38" font-family="'Inter', sans-serif" font-weight="bold" font-size="7" fill="#3A3A3D" text-anchor="middle">524w3 Ultra</text>
+  </g>
+
+  <!-- 2. Amazon Fire TV Stick -->
+  <g transform="translate(850, 580)" filter="url(#boxShadow)">
+    <!-- 3D body representation -->
+    <rect x="0" y="0" width="30" height="95" rx="5" fill="#18181B" stroke="#333336" stroke-width="1.5" transform="rotate(70)" />
+    <!-- HDMI plug on end -->
+    <rect x="-14" y="5" width="14" height="18" rx="1" fill="#D4AF37" transform="rotate(70)" />
+    <text x="38" y="-12" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="11" fill="#718096" transform="rotate(70)">fire tv</text>
+  </g>
+
+  <!-- 3. Dynamic Interactive Smartphone showing login screen -->
+  <g transform="translate(1000, 480)" filter="url(#boxShadow)">
+    <!-- Phone Bezel Frame -->
+    <rect x="0" y="0" width="125" height="235" rx="18" fill="#0F0F12" stroke="#2D3748" stroke-width="3" />
+    <!-- Speaker notch -->
+    <rect x="42" y="6" width="40" height="4" rx="2" fill="#2D3748" />
+    <!-- Screen -->
+    <rect x="5" y="16" width="115" height="203" rx="12" fill="#0E131F" />
+    
+    <!-- Phone IPTV Smarters Screen UI -->
+    <!-- Brand -->
+    <text x="62" y="38" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="11" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">IPTV</text>
+    <text x="62" y="47" font-family="'Inter', sans-serif" font-weight="900" font-size="7" fill="#FF1E27" text-anchor="middle" letter-spacing="2">SMARTERS</text>
+
+    <!-- Inputs -->
+    <g transform="translate(12, 60)">
+      <!-- Name input -->
+      <rect x="0" y="0" width="90" height="18" rx="3" fill="#1C2130" stroke="#2D3748" stroke-width="0.8" />
+      <text x="8" y="12" font-family="'Inter', sans-serif" font-weight="bold" font-size="7" fill="#718096">Any Name</text>
+      
+      <!-- Username input -->
+      <rect x="0" y="24" width="90" height="18" rx="3" fill="#1C2130" stroke="#2D3748" stroke-width="0.8" />
+      <text x="8" y="36" font-family="'Inter', sans-serif" font-weight="bold" font-size="7" fill="#718096">Username</text>
+
+      <!-- Password input -->
+      <rect x="0" y="48" width="90" height="18" rx="3" fill="#1C2130" stroke="#2D3748" stroke-width="0.8" />
+      <text x="8" y="60" font-family="'Inter', sans-serif" font-weight="bold" font-size="7" fill="#718096">Password</text>
+
+      <!-- Server URL input -->
+      <rect x="0" y="72" width="90" height="18" rx="3" fill="#1C2130" stroke="#2D3748" stroke-width="0.8" />
+      <text x="8" y="84" font-family="'Inter', sans-serif" font-weight="normal" font-size="6.5" fill="#E2E8F0">http://redstream.me:80</text>
+
+      <!-- ADD USER Button -->
+      <rect x="0" y="98" width="90" height="20" rx="4" fill="url(#redMetallic)" stroke="#FF1E27" stroke-width="0.5" />
+      <text x="45" y="111" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="8" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">ADD USER</text>
+    </g>
+
+    <!-- Dynamic Screen Shine Reflection -->
+    <path d="M5 16 L65 16 L15 219 L5 219 Z" fill="#FFFFFF" fill-opacity="0.03" />
+  </g>
+
+  <!-- 4. Premium Remote Control lying at center -->
+  <g transform="translate(770, 520)" filter="url(#boxShadow)">
+    <rect x="0" y="0" width="36" height="140" rx="8" fill="#111113" stroke="#242427" stroke-width="1.5" transform="rotate(-15)" />
+    <!-- Red power button -->
+    <circle cx="10" cy="12" r="3.5" fill="#FF1E27" transform="rotate(-15)" />
+    <!-- Directional Pad ring -->
+    <circle cx="18" cy="45" r="10" fill="none" stroke="#333" stroke-width="3" transform="rotate(-15)" />
+    <circle cx="18" cy="45" r="3" fill="#FF3E47" transform="rotate(-15)" />
+    <!-- Buttons Grid -->
+    <circle cx="10" cy="75" r="2" fill="#555" transform="rotate(-15)" />
+    <circle cx="18" cy="75" r="2" fill="#555" transform="rotate(-15)" />
+    <circle cx="26" cy="75" r="2" fill="#555" transform="rotate(-15)" />
+    <circle cx="10" cy="85" r="2" fill="#555" transform="rotate(-15)" />
+    <circle cx="18" cy="85" r="2" fill="#555" transform="rotate(-15)" />
+    <circle cx="26" cy="85" r="2" fill="#555" transform="rotate(-15)" />
+    <circle cx="10" cy="95" r="2" fill="#555" transform="rotate(-15)" />
+    <circle cx="18" cy="95" r="2" fill="#555" transform="rotate(-15)" />
+    <circle cx="26" cy="95" r="2" fill="#555" transform="rotate(-15)" />
+    
+    <!-- Quick Launcher Buttons (Netflix / Prime Colors) -->
+    <rect x="6" y="110" width="10" height="5" rx="1" fill="#E50914" transform="rotate(-15)" />
+    <rect x="20" y="110" width="10" height="5" rx="1" fill="#00A8E1" transform="rotate(-15)" />
+  </g>
+
+  <!-- Sparkles & Digital Tech Accents -->
+  <g transform="translate(0,0)" opacity="0.8">
+    <!-- Star sparkle near TV top corner -->
+    <path d="M1100 150 L1103 160 L1113 163 L1103 166 L1100 176 L1097 166 L1087 163 L1097 160 Z" fill="#FFFFFF" filter="url(#tvGlow)" />
+    <!-- Star sparkle near Colossal title -->
+    <path d="M160 160 L162 165 L167 167 L162 169 L160 174 L158 169 L153 167 L158 165 Z" fill="#FF5C64" filter="url(#tvGlow)" />
+  </g>
+
+</svg>

@@ -18,10 +18,12 @@ interface BlogPostProps {
 export default function BlogPostComponent({ post, lang, t, onBack }: BlogPostProps) {
   // Find Cover Image based on slug
   const coverImage = post.slug.includes('samsung') 
-    ? '/1000148211-iptv-france.webp' 
+    ? '/samsung_iptv_guide.svg' 
     : post.slug.includes('setup')
-    ? '/1000148213-iptv-france.webp'
-    : '/1000148230-iptv-france.webp';
+    ? '/ultimate_iptv_setup_guide.svg'
+    : post.slug.includes('future')
+    ? '/future_streaming_trends_2026.svg'
+    : '/redstream_blog_cover.svg';
 
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-white py-12 px-4 sm:px-6 lg:px-8">

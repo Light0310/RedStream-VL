@@ -128,7 +128,7 @@ export default function App() {
   // Languages metadata for layout selector
   const languageNames: Record<Language, { native: string; flag: string; label: string }> = {
     en: { native: 'English', flag: '🇬🇧', label: 'EN' },
-    ar: { native: 'العربية', flag: '🇲🇦', label: 'AR' },
+    ar: { native: 'العربية', flag: '🇸🇦', label: 'AR' },
     es: { native: 'Español', flag: '🇪🇸', label: 'ES' },
     nl: { native: 'Nederlands', flag: '🇳🇱', label: 'NL' },
   };

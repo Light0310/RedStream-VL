@@ -6,12 +6,20 @@
 import { useState, useEffect } from 'react';
 import { Globe, ChevronDown } from 'lucide-react';
 import { Language } from '../types';
+import { getTranslatedLandingHTML } from './HomeTranslations';
 
 const languageNames: Record<Language, { native: string; flag: string; label: string }> = {
   en: { native: 'English', flag: '🇬🇧', label: 'EN' },
-  ar: { native: 'العربية', flag: '🇲🇦', label: 'AR' },
+  ar: { native: 'العربية', flag: '🇸🇦', label: 'AR' },
   es: { native: 'Español', flag: '🇪🇸', label: 'ES' },
   nl: { native: 'Nederlands', flag: '🇳🇱', label: 'NL' },
+};
+
+const navTranslations: Record<Language, { home: string; features: string; pricing: string; faq: string; blog: string; cta: string }> = {
+  en: { home: 'Home', features: 'Features', pricing: 'Pricing', faq: 'FAQ', blog: 'Blog', cta: 'Get Free Trial' },
+  ar: { home: 'الرئيسية', features: 'المميزات', pricing: 'الأسعار', faq: 'الأسئلة الشائعة', blog: 'المدونة', cta: 'تجربة مجانية' },
+  es: { home: 'Inicio', features: 'Características', pricing: 'Precios', faq: 'Preguntas Frecuentes', blog: 'Blog', cta: 'Prueba Gratis' },
+  nl: { home: 'Home', features: 'Kenmerken', pricing: 'Prijzen', faq: 'FAQ', blog: 'Blog', cta: 'Gratis Test' }
 };
 
 interface HomeProps {
@@ -530,13 +538,13 @@ export default function Home({ currentLang = 'en', onChangeLanguage }: HomeProps
           {/* Desktop Nav links */}
           <nav style={{ display: 'flex', alignItems: 'center' }}>
             <ul className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`} id="nav-menu">
-              <li><a href="#" id="link-home" onClick={() => setIsMobileMenuOpen(false)}>{currentLang === 'ar' ? 'الرئيسية' : 'Home'}</a></li>
-              <li><a href="#features" id="link-features" onClick={() => setIsMobileMenuOpen(false)}>{currentLang === 'ar' ? 'المميزات' : 'Features'}</a></li>
-              <li><a href="#pricing" id="link-pricing" onClick={() => setIsMobileMenuOpen(false)}>{currentLang === 'ar' ? 'الأسعار' : 'Pricing'}</a></li>
-              <li><a href="#faq" id="link-faq" onClick={() => setIsMobileMenuOpen(false)}>{currentLang === 'ar' ? 'الأسئلة الشائعة' : 'FAQ'}</a></li>
-              <li><a href={`#/${currentLang}/blog`} id="link-blog" style={{ color: '#FF1E27', fontWeight: 800 }} onClick={() => setIsMobileMenuOpen(false)}>{currentLang === 'ar' ? 'المدونة' : 'Blog'}</a></li>
+              <li><a href="#" id="link-home" onClick={() => setIsMobileMenuOpen(false)}>{navTranslations[currentLang].home}</a></li>
+              <li><a href="#features" id="link-features" onClick={() => setIsMobileMenuOpen(false)}>{navTranslations[currentLang].features}</a></li>
+              <li><a href="#pricing" id="link-pricing" onClick={() => setIsMobileMenuOpen(false)}>{navTranslations[currentLang].pricing}</a></li>
+              <li><a href="#faq" id="link-faq" onClick={() => setIsMobileMenuOpen(false)}>{navTranslations[currentLang].faq}</a></li>
+              <li><a href={`#/${currentLang}/blog`} id="link-blog" style={{ color: '#FF1E27', fontWeight: 800 }} onClick={() => setIsMobileMenuOpen(false)}>{navTranslations[currentLang].blog}</a></li>
             </ul>
-            <a href="https://wa.me/212694843943?text=Hello%20RedStream,%20I%20want%20to%20get%20a%20free%20IPTV%20trial." target="_blank" rel="noopener noreferrer" className="nav-cta" id="nav-cta-trial">{currentLang === 'ar' ? 'تجربة مجانية' : 'Get Free Trial'}</a>
+            <a href="https://wa.me/212694843943?text=Hello%20RedStream,%20I%20want%20to%20get%20a%20free%20IPTV%20trial." target="_blank" rel="noopener noreferrer" className="nav-cta" id="nav-cta-trial">{navTranslations[currentLang].cta}</a>
             
             {/* Elegant Language Switcher inside header */}
             <div className="lang-switcher-wrapper" style={{ position: 'relative', display: 'inline-block', marginLeft: '12px' }}>
@@ -631,7 +639,7 @@ export default function Home({ currentLang = 'en', onChangeLanguage }: HomeProps
       </header>
 
       {/* Hero Section & Rest of Landing Page Content */}
-      <div dangerouslySetInnerHTML={{ __html: LANDING_HTML_REST }} />
+      <div dangerouslySetInnerHTML={{ __html: getTranslatedLandingHTML(LANDING_HTML_REST, currentLang) }} />
     </>
   );
 }

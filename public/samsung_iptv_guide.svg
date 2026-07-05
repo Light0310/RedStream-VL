@@ -1,0 +1,390 @@
+<svg viewBox="0 0 1200 800" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradients -->
+    <radialGradient id="bgGlow" cx="70%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#0a1526" />
+      <stop offset="50%" stop-color="#040810" />
+      <stop offset="100%" stop-color="#010306" />
+    </radialGradient>
+    
+    <!-- Neon Blue-Purple Gradients -->
+    <linearGradient id="neonBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F0FF" />
+      <stop offset="100%" stop-color="#0072FF" />
+    </linearGradient>
+
+    <linearGradient id="neonPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#9D4EDD" />
+      <stop offset="100%" stop-color="#5A189A" />
+    </linearGradient>
+
+    <linearGradient id="pillGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0052D4" />
+      <stop offset="50%" stop-color="#4364F7" />
+      <stop offset="100%" stop-color="#6FB1FC" />
+    </linearGradient>
+
+    <!-- TV Colors -->
+    <linearGradient id="tvLive" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <linearGradient id="tvMovies" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#b91c1c" />
+    </linearGradient>
+    <linearGradient id="tvSeries" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#0891b2" />
+    </linearGradient>
+    <linearGradient id="tvCatch" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+
+    <!-- Glowing effect filters -->
+    <filter id="glowCyan" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#000000" flood-opacity="0.8" />
+    </filter>
+  </defs>
+
+  <!-- Background Rect -->
+  <rect width="100%" height="100%" fill="url(#bgGlow)" />
+
+  <!-- Technical Grid overlay -->
+  <g opacity="0.04" stroke="#00D2FF" stroke-width="1">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" />
+    </pattern>
+    <rect width="100%" height="100%" fill="url(#grid)" />
+  </g>
+
+  <!-- Ambient Blue lights around -->
+  <circle cx="950" cy="300" r="280" fill="#0072FF" opacity="0.12" filter="url(#glowCyan)" />
+  <circle cx="100" cy="200" r="200" fill="#00F0FF" opacity="0.08" filter="url(#glowCyan)" />
+
+  <!-- ==================== LEFT COLUMN: COPIOUS TEXT & STEP GUIDE ==================== -->
+  <g transform="translate(60, 75)">
+    
+    <!-- Title Text Block -->
+    <text x="0" y="30" font-family="'Space Grotesk', 'Inter', sans-serif" font-weight="800" font-size="32" fill="#E2E8F0" letter-spacing="2">HOW TO</text>
+    <text x="0" y="125" font-family="'Space Grotesk', 'Inter', sans-serif" font-weight="950" font-size="95" fill="#FFFFFF" letter-spacing="1">SET UP</text>
+    <text x="0" y="225" font-family="'Space Grotesk', 'Inter', sans-serif" font-weight="950" font-size="115" fill="url(#neonBlue)" letter-spacing="3" filter="drop-shadow(0 10px 15px rgba(0,240,255,0.2))">IPTV</text>
+    
+    <text x="0" y="275" font-family="'Space Grotesk', 'Inter', sans-serif" font-weight="900" font-size="28" fill="#FFFFFF" letter-spacing="1">
+      ON <tspan fill="#00F0FF">SAMSUNG</tspan> SMART TV:
+    </text>
+
+    <!-- Zero Buffering Guide Button Badge -->
+    <g transform="translate(0, 300)">
+      <rect width="390" height="52" rx="10" fill="url(#pillGrad)" stroke="#6FB1FC" stroke-width="1.5" filter="url(#softShadow)" />
+      <text x="195" y="33" font-family="'Space Grotesk', 'Inter', sans-serif" font-weight="950" font-size="22" fill="#FFFFFF" letter-spacing="4" text-anchor="middle">ZERO BUFFERING GUIDE</text>
+    </g>
+
+    <!-- Interactive Steps 1, 2, 3 -->
+    <g transform="translate(0, 395)">
+      
+      <!-- Step 1 -->
+      <g transform="translate(0, 0)">
+        <circle cx="30" cy="25" r="25" fill="#131F37" stroke="#7B2CBF" stroke-width="2" />
+        <rect x="20" y="17" width="20" height="14" rx="2" fill="none" stroke="#9D4EDD" stroke-width="2" />
+        <line x1="25" y1="31" x2="23" y2="35" stroke="#9D4EDD" stroke-width="2" />
+        <line x1="35" y1="31" x2="37" y2="35" stroke="#9D4EDD" stroke-width="2" />
+        
+        <text x="75" y="18" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="16" fill="#FFFFFF" letter-spacing="0.5">1. INSTALL APP</text>
+        <text x="75" y="36" font-family="'Inter', sans-serif" font-weight="500" font-size="13" fill="#94A3B8">Install the best IPTV player on your Samsung TV</text>
+      </g>
+
+      <!-- Step 2 -->
+      <g transform="translate(0, 80)">
+        <circle cx="30" cy="25" r="25" fill="#131F37" stroke="#0072FF" stroke-width="2" />
+        <!-- Playlist Icon -->
+        <rect x="21" y="17" width="18" height="16" rx="2" fill="none" stroke="#00F0FF" stroke-width="2" />
+        <line x1="25" y1="21" x2="31" y2="21" stroke="#00F0FF" stroke-width="2" />
+        <line x1="25" y1="25" x2="35" y2="25" stroke="#00F0FF" stroke-width="2" />
+        <line x1="25" y1="29" x2="31" y2="29" stroke="#00F0FF" stroke-width="2" />
+
+        <text x="75" y="18" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="16" fill="#FFFFFF" letter-spacing="0.5">2. ADD PLAYLIST</text>
+        <text x="75" y="36" font-family="'Inter', sans-serif" font-weight="500" font-size="13" fill="#94A3B8">Enter your M3U URL or Xtream Codes details</text>
+      </g>
+
+      <!-- Step 3 -->
+      <g transform="translate(0, 160)">
+        <circle cx="30" cy="25" r="25" fill="#131F37" stroke="#00F0FF" stroke-width="2" />
+        <!-- Play Video Icon -->
+        <polygon points="26 17, 38 25, 26 33" fill="none" stroke="#00F0FF" stroke-width="2" stroke-linejoin="round" />
+
+        <text x="75" y="18" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="16" fill="#FFFFFF" letter-spacing="0.5">3. START STREAMING</text>
+        <text x="75" y="36" font-family="'Inter', sans-serif" font-weight="500" font-size="13" fill="#94A3B8">Enjoy your favorite channels in HD/4K – No Buffering!</text>
+      </g>
+    </g>
+
+    <!-- Speedometer Zero Buffering Gauge -->
+    <g transform="translate(300, 15)">
+      <!-- Ring gauge -->
+      <circle cx="80" cy="80" r="55" fill="none" stroke="#131F37" stroke-width="12" />
+      <path d="M36 115 A 55 55 0 1 1 124 115" fill="none" stroke="url(#neonBlue)" stroke-width="12" stroke-linecap="round" stroke-dasharray="240 60" />
+      
+      <!-- Needle pointing to max speed (Zero Buffering) -->
+      <line x1="80" y1="80" x2="120" y2="50" stroke="#FF0055" stroke-width="4" stroke-linecap="round" />
+      <circle cx="80" cy="80" r="7" fill="#FF0055" />
+      
+      <!-- Inside text labels -->
+      <text x="80" y="78" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="11" fill="#FFFFFF" text-anchor="middle">ZERO</text>
+      <text x="80" y="93" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="9" fill="#00F0FF" text-anchor="middle" letter-spacing="0.5">BUFFERING</text>
+    </g>
+
+  </g>
+
+  <!-- ==================== RIGHT COLUMN: SAMSUNG SMART TV & INTERFACES ==================== -->
+  
+  <ellipse cx="910" cy="360" rx="230" ry="170" fill="#00F0FF" opacity="0.08" filter="url(#glowCyan)" />
+
+  <!-- TV Set -->
+  <g transform="translate(560, 105)" filter="url(#softShadow)">
+    
+    <!-- TV Base Stand -->
+    <path d="M 160 440 L 190 475 L 390 475 L 420 440 Z" fill="#131722" stroke="#232936" stroke-width="1.5" />
+    <rect x="275" y="420" width="30" height="25" fill="#090C12" stroke="#1A202C" stroke-width="1.5" />
+
+    <!-- Outer TV Frame Bezel -->
+    <rect width="580" height="420" rx="14" fill="#0B0F19" stroke="#1E293B" stroke-width="4" />
+    <rect x="3" y="3" width="574" height="414" rx="11" fill="none" stroke="#00F0FF" stroke-opacity="0.1" stroke-width="1.5" />
+
+    <!-- SMART TV Badge on Top Right corner -->
+    <g transform="translate(435, 18)" font-family="'Space Grotesk', sans-serif" font-size="12" font-weight="900">
+      <!-- Colored puzzle logo for Smart TV -->
+      <text x="40" y="11" fill="#FFFFFF" letter-spacing="0.5">SM<tspan fill="#FF3E47">A</tspan>RT TV</text>
+      <!-- Small logo elements -->
+      <polygon points="12 -2, 22 -2, 17 8" fill="#00F0FF" />
+      <polygon points="17 8, 27 8, 22 -2" fill="#E50914" />
+    </g>
+    
+    <!-- Samsung brand text in middle bottom bezel -->
+    <text x="290" y="413" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="11" fill="#475569" letter-spacing="2" text-anchor="middle">SAMSUNG</text>
+
+    <!-- TV Screen Display Contents (IPTV Media Grid UI) -->
+    <g transform="translate(10, 38)">
+      <rect width="560" height="360" rx="4" fill="#070A12" />
+      
+      <!-- Ambient screen backdrop -->
+      <rect width="560" height="360" rx="4" fill="url(#bgGlow)" opacity="0.7" />
+
+      <!-- UI Header -->
+      <g transform="translate(20, 24)">
+        <text x="0" y="12" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="15" fill="#FFFFFF" letter-spacing="1">IPTV SMARTERS</text>
+        <text x="140" y="11" font-family="'Inter', sans-serif" font-weight="600" font-size="9" fill="#475569">12:45 PM</text>
+
+        <!-- Right icons (Search, profile, gear, Wifi) -->
+        <g transform="translate(390, 0)" stroke="#94A3B8" stroke-width="1.5" fill="none">
+          <!-- Search -->
+          <circle cx="10" cy="8" r="4" />
+          <line x1="13" y1="11" x2="18" y2="16" />
+          <!-- User -->
+          <circle cx="45" cy="8" r="4" />
+          <path d="M39 17 C39 14 42 13 45 13 C48 13 51 14 51 17" />
+          <!-- Gear -->
+          <circle cx="80" cy="8" r="3" />
+          <path d="M80 3 L80 5 M80 11 L80 13 M75 8 L77 8 M83 8 L85 8" />
+          <!-- Wifi -->
+          <path d="M110 5 A6 6 0 0 1 122 5 M113 9 A3 3 0 0 1 119 9" stroke-linecap="round" />
+          <circle cx="116" cy="13" r="1" fill="#94A3B8" />
+        </g>
+      </g>
+
+      <!-- Main IPTV Categories list cards -->
+      <g transform="translate(20, 70)">
+        
+        <!-- Live TV Card -->
+        <g transform="translate(0, 0)">
+          <rect width="125" height="185" rx="10" fill="url(#tvLive)" filter="url(#softShadow)" />
+          <!-- Icon -->
+          <g transform="translate(62, 75)">
+            <circle cx="0" cy="0" r="22" fill="#FFFFFF" fill-opacity="0.15" />
+            <rect x="-14" y="-10" width="28" height="20" rx="3" fill="none" stroke="#FFFFFF" stroke-width="2" />
+            <polygon points="-4 -4, 6 0, -4 4" fill="#FFFFFF" />
+          </g>
+          <text x="62" y="145" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="14" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">LIVE TV</text>
+        </g>
+
+        <!-- Movies Card -->
+        <g transform="translate(140, 0)">
+          <rect width="125" height="185" rx="10" fill="url(#tvMovies)" filter="url(#softShadow)" />
+          <g transform="translate(62, 75)">
+            <circle cx="0" cy="0" r="22" fill="#FFFFFF" fill-opacity="0.15" />
+            <polygon points="-6 -10, 8 0, -6 10" fill="#FFFFFF" />
+          </g>
+          <text x="62" y="145" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="14" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">MOVIES</text>
+        </g>
+
+        <!-- Series Card -->
+        <g transform="translate(280, 0)">
+          <rect width="125" height="185" rx="10" fill="url(#tvSeries)" filter="url(#softShadow)" />
+          <g transform="translate(62, 75)">
+            <circle cx="0" cy="0" r="22" fill="#FFFFFF" fill-opacity="0.15" />
+            <rect x="-13" y="-11" width="26" height="22" rx="2" fill="none" stroke="#FFFFFF" stroke-width="2" />
+            <line x1="-13" y1="-3" x2="13" y2="-3" stroke="#FFFFFF" stroke-width="1.5" />
+            <line x1="-5" y1="-11" x2="-5" y2="-3" stroke="#FFFFFF" stroke-width="1.5" />
+            <line x1="5" y1="-11" x2="5" y2="-3" stroke="#FFFFFF" stroke-width="1.5" />
+          </g>
+          <text x="62" y="145" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="14" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">SERIES</text>
+        </g>
+
+        <!-- Catch Up Card -->
+        <g transform="translate(420, 0)">
+          <rect width="100" height="185" rx="10" fill="url(#tvCatch)" filter="url(#softShadow)" />
+          <g transform="translate(50, 75)">
+            <circle cx="0" cy="0" r="22" fill="#FFFFFF" fill-opacity="0.15" />
+            <path d="M-8 4 A8 8 0 1 1 8 4" fill="none" stroke="#FFFFFF" stroke-width="2" />
+            <polygon points="4 4, 8 1, 8 7" fill="#FFFFFF" />
+          </g>
+          <text x="50" y="145" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="13" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">CATCH UP</text>
+        </g>
+
+      </g>
+
+      <!-- Bottom Mini Status items -->
+      <g transform="translate(20, 275)">
+        
+        <!-- Multi screen button -->
+        <g transform="translate(0, 0)">
+          <rect width="100" height="26" rx="5" fill="#1E293B" stroke="#334155" stroke-width="0.8" />
+          <!-- Grid Icon -->
+          <rect x="10" y="7" width="5" height="5" fill="none" stroke="#94A3B8" stroke-width="1" />
+          <rect x="18" y="7" width="5" height="5" fill="none" stroke="#94A3B8" stroke-width="1" />
+          <rect x="10" y="14" width="5" height="5" fill="none" stroke="#94A3B8" stroke-width="1" />
+          <rect x="18" y="14" width="5" height="5" fill="none" stroke="#94A3B8" stroke-width="1" />
+          <text x="28" y="16" font-family="'Inter', sans-serif" font-weight="700" font-size="7" fill="#94A3B8" letter-spacing="0.5">MULTI-SCREEN</text>
+        </g>
+
+        <!-- EPG Button -->
+        <g transform="translate(108, 0)">
+          <rect width="60" height="26" rx="5" fill="#1E293B" stroke="#334155" stroke-width="0.8" />
+          <text x="30" y="16" font-family="'Inter', sans-serif" font-weight="800" font-size="7" fill="#94A3B8" text-anchor="middle" letter-spacing="0.5">EPG</text>
+        </g>
+
+        <!-- Favorites Button -->
+        <g transform="translate(176, 0)">
+          <rect width="85" height="26" rx="5" fill="#1E293B" stroke="#334155" stroke-width="0.8" />
+          <!-- Star Icon -->
+          <polygon points="15 7, 17 11, 22 11, 18 14, 20 19, 15 16, 10 19, 12 14, 8 11, 13 11" fill="none" stroke="#94A3B8" stroke-width="1" />
+          <text x="28" y="16" font-family="'Inter', sans-serif" font-weight="700" font-size="7" fill="#94A3B8" letter-spacing="0.5">FAVORITES</text>
+        </g>
+
+        <!-- Settings Button -->
+        <g transform="translate(269, 0)">
+          <rect width="85" height="26" rx="5" fill="#1E293B" stroke="#334155" stroke-width="0.8" />
+          <!-- Gear -->
+          <circle cx="15" cy="13" r="3" fill="none" stroke="#94A3B8" stroke-width="1" />
+          <text x="26" y="16" font-family="'Inter', sans-serif" font-weight="700" font-size="7" fill="#94A3B8" letter-spacing="0.5">SETTINGS</text>
+        </g>
+
+        <!-- Expiration info -->
+        <g transform="translate(370, 0)">
+          <text x="12" y="15" font-family="'Inter', sans-serif" font-weight="700" font-size="9" fill="#64748B">Expiration:</text>
+          <text x="70" y="15" font-family="'Inter', sans-serif" font-weight="900" font-size="10" fill="#10B981">Unlimited Account</text>
+        </g>
+
+      </g>
+
+    </g>
+
+  </g>
+
+  <!-- ==================== FRONT SURFACE HARDWARE ELEMENTS ==================== -->
+  
+  <!-- Media Shelf wood panel -->
+  <rect x="520" y="585" width="650" height="22" fill="#0B0D14" stroke="#1E293B" stroke-dasharray="10 5" stroke-width="1.5" rx="3" />
+  
+  <!-- Sleek Router Box representing high quality IPTV network connection -->
+  <g transform="translate(580, 520)" filter="url(#softShadow)">
+    <path d="M 10 30 L 160 30 L 175 55 L 0 55 Z" fill="#0C101B" />
+    <!-- Top cover of router -->
+    <path d="M 0 0 L 150 0 L 160 30 L 10 30 Z" fill="#161F33" stroke="#2B3A5A" stroke-width="1" />
+    <!-- Antennas -->
+    <line x1="10" y1="0" x2="10" y2="-75" stroke="#111827" stroke-width="5" stroke-linecap="round" />
+    <line x1="140" y1="0" x2="140" y2="-75" stroke="#111827" stroke-width="5" stroke-linecap="round" />
+    <!-- Glowing Wi-Fi symbol on front -->
+    <path d="M 80 40 A 10 10 0 0 1 90 40 A 6 6 0 0 1 88 43" fill="none" stroke="#00F0FF" stroke-width="1.5" filter="url(#glowCyan)" />
+    <circle cx="85" cy="46" r="1" fill="#FFFFFF" />
+  </g>
+
+  <!-- Premium Remote Control -->
+  <g transform="translate(775, 525)" filter="url(#softShadow)">
+    <rect width="34" height="145" rx="8" fill="#111420" stroke="#1E293B" stroke-width="1" transform="rotate(-20)" />
+    <!-- Red Power Button -->
+    <circle cx="8" cy="11" r="3" fill="#EF4444" transform="rotate(-20)" />
+    <!-- Navigation Circle -->
+    <circle cx="17" cy="45" r="9" fill="none" stroke="#334155" stroke-width="2.5" transform="rotate(-20)" />
+    <circle cx="17" cy="45" r="2.5" fill="#00F0FF" transform="rotate(-20)" />
+    <!-- Other grid buttons -->
+    <circle cx="9" cy="72" r="1.5" fill="#475569" transform="rotate(-20)" />
+    <circle cx="17" cy="72" r="1.5" fill="#475569" transform="rotate(-20)" />
+    <circle cx="25" cy="72" r="1.5" fill="#475569" transform="rotate(-20)" />
+    <circle cx="9" cy="85" r="1.5" fill="#475569" transform="rotate(-20)" />
+    <circle cx="17" cy="85" r="1.5" fill="#475569" transform="rotate(-20)" />
+    <circle cx="25" cy="85" r="1.5" fill="#475569" transform="rotate(-20)" />
+    <!-- Volume/Channel toggle -->
+    <rect x="7" y="100" width="4" height="12" rx="1" fill="#475569" transform="rotate(-20)" />
+    <rect x="23" y="100" width="4" height="12" rx="1" fill="#475569" transform="rotate(-20)" />
+  </g>
+
+  <!-- ==================== FOOTER / TRUST BADGES ROW ==================== -->
+  
+  <!-- Technical features stats banner at bottom -->
+  <g transform="translate(60, 680)">
+    
+    <!-- Stable Connection Badge -->
+    <g transform="translate(60, 0)">
+      <path d="M10 12 A10 10 0 0 1 30 12 M13 16 A6 6 0 0 1 27 16" fill="none" stroke="#00F0FF" stroke-width="2" stroke-linecap="round" />
+      <circle cx="20" cy="21" r="2" fill="#00F0FF" />
+      <text x="45" y="13" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="12" fill="#FFFFFF">STABLE</text>
+      <text x="45" y="25" font-family="'Inter', sans-serif" font-weight="700" font-size="9" fill="#475569">CONNECTION</text>
+    </g>
+
+    <!-- HD & 4K Quality -->
+    <g transform="translate(260, 0)">
+      <rect x="10" y="5" width="22" height="16" rx="2" fill="none" stroke="#00F0FF" stroke-width="2" />
+      <text x="21" y="16" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="8" fill="#00F0FF" text-anchor="middle">4K</text>
+      <text x="45" y="13" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="12" fill="#FFFFFF">HD &amp; 4K</text>
+      <text x="45" y="25" font-family="'Inter', sans-serif" font-weight="700" font-size="9" fill="#475569">QUALITY</text>
+    </g>
+
+    <!-- 100% Secure -->
+    <g transform="translate(460, 0)">
+      <polygon points="20 4, 32 8, 32 17, 20 23, 8 17, 8 8" fill="none" stroke="#00F0FF" stroke-width="2" />
+      <path d="M16 11 L19 14 L24 8" fill="none" stroke="#00F0FF" stroke-width="2" stroke-linecap="round" />
+      <text x="45" y="13" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="12" fill="#FFFFFF">100%</text>
+      <text x="45" y="25" font-family="'Inter', sans-serif" font-weight="700" font-size="9" fill="#475569">SECURE</text>
+    </g>
+
+    <!-- 24/7 Entertainment -->
+    <g transform="translate(660, 0)">
+      <circle cx="20" cy="14" r="10" fill="none" stroke="#00F0FF" stroke-width="2" />
+      <polyline points="20 8, 20 14, 25 14" fill="none" stroke="#00F0FF" stroke-width="2" stroke-linecap="round" />
+      <text x="45" y="13" font-family="'Space Grotesk', sans-serif" font-weight="bold" font-size="12" fill="#FFFFFF">24/7</text>
+      <text x="45" y="25" font-family="'Inter', sans-serif" font-weight="700" font-size="9" fill="#475569">ENTERTAINMENT</text>
+    </g>
+
+  </g>
+
+  <!-- Bottom Capsule Bar for Works on All Samsung Smart TVs -->
+  <g transform="translate(325, 740)">
+    <rect width="550" height="34" rx="17" fill="#0C1324" stroke="#1D2A4A" stroke-width="1" />
+    <circle cx="22" cy="17" r="6" fill="#10B981" />
+    <!-- Checkmark inside green circle -->
+    <path d="M19 17 L21 19 L25 15" fill="none" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" />
+    <text x="38" y="21" font-family="'Inter', sans-serif" font-weight="700" font-size="11" fill="#94A3B8">
+      Best IPTV Settings  |  Fast &amp; Stable Streaming  |  Works on All Samsung Smart TVs
+    </text>
+  </g>
+
+</svg>
