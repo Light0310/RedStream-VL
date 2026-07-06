@@ -315,42 +315,6 @@ export default function Home({ currentLang = 'en', onChangeLanguage }: HomeProps
       document.addEventListener('mouseleave', handleMouseLeave);
     }
 
-    // Device Compatibility Checker
-    const checkCompatBtn = document.getElementById('check-compat-btn') as HTMLButtonElement | null;
-    const deviceSelect = document.getElementById('device-select') as HTMLSelectElement | null;
-    const compatResultBox = document.getElementById('compat-result-box');
-
-    const handleCompatClick = () => {
-      if (!deviceSelect || !checkCompatBtn || !compatResultBox) return;
-      if (!deviceSelect.value) {
-        deviceSelect.style.borderColor = '#e50914';
-        deviceSelect.style.boxShadow = '0 0 10px rgba(229, 9, 20, 0.4)';
-        setTimeout(() => {
-          deviceSelect.style.borderColor = 'rgba(255, 255, 255, 0.1)';
-          deviceSelect.style.boxShadow = 'none';
-        }, 1500);
-        return;
-      }
-
-      checkCompatBtn.disabled = true;
-      checkCompatBtn.innerText = "Analyzing System...";
-      compatResultBox.style.display = 'none';
-
-      setTimeout(() => {
-        checkCompatBtn.disabled = false;
-        checkCompatBtn.innerText = "Check Compatibility";
-        compatResultBox.style.display = 'block';
-        compatResultBox.style.opacity = '0';
-        setTimeout(() => {
-          compatResultBox.style.opacity = '1';
-        }, 50);
-      }, 850);
-    };
-
-    if (checkCompatBtn) {
-      checkCompatBtn.addEventListener('click', handleCompatClick);
-    }
-
     // Testimonials slider
     const testimonialsTrack = document.getElementById('testimonials-track');
     const testimonialsPrevBtn = document.getElementById('testimonials-prev');
@@ -506,7 +470,7 @@ export default function Home({ currentLang = 'en', onChangeLanguage }: HomeProps
         document.removeEventListener('mouseleave', handleMouseLeave);
         if (document.body.contains(overlay)) document.body.removeChild(overlay);
       }
-      if (checkCompatBtn) checkCompatBtn.removeEventListener('click', handleCompatClick);
+
       if (testimonialsPrevBtn) testimonialsPrevBtn.removeEventListener('click', handleTestimonialsPrev);
       if (testimonialsNextBtn) testimonialsNextBtn.removeEventListener('click', handleTestimonialsNext);
       if (testimonialsTrack) {
@@ -879,39 +843,44 @@ const LANDING_HTML_TOP = `
     </div>
   </section>
 
-  <!-- Device Compatibility Checker Section -->
+  <!-- Device Compatibility Logos Section -->
   <section class="compatibility" id="compatibility" style="background: linear-gradient(180deg, #0a0a0a 0%, #121212 100%); padding: 60px 0; border-top: 1px solid rgba(255, 255, 255, 0.05); border-bottom: 1px solid rgba(255, 255, 255, 0.05);">
     <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-      <div style="max-width: 650px; margin: 0 auto; background: #141414; border: 1.5px solid rgba(229, 9, 20, 0.2); border-radius: 16px; padding: 40px 30px; text-align: center; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(229, 9, 20, 0.05); transition: border-color 0.3s ease;">
-        <div style="font-size: 2.2rem; margin-bottom: 15px; display: inline-block;">📺</div>
-        <h2 style="font-family: var(--font-sans, sans-serif); font-weight: 800; font-size: 1.6rem; color: #ffffff; text-transform: uppercase; letter-spacing: -0.02em; margin-bottom: 10px;">Check Device Compatibility</h2>
-        <p style="color: #aaaaaa; font-size: 0.95rem; line-height: 1.5; margin-bottom: 25px;">Ensure your Smart TV, streaming box, or phone is ready for our premium anti-freeze channels before you get started.</p>
+      <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <h2 style="font-family: var(--font-sans, sans-serif); font-weight: 800; font-size: 1.8rem; color: #ffffff; text-transform: uppercase; letter-spacing: -0.02em; margin-bottom: 15px;">Supported Devices</h2>
+        <p style="color: #aaaaaa; font-size: 1rem; line-height: 1.6; margin-bottom: 40px;">RedStream™ is fully optimized and 100% compatible with all your favorite smart devices and streaming boxes. Setup takes less than 5 minutes.</p>
         
-        <div class="compatibility-form" style="display: flex; flex-direction: column; gap: 15px; align-items: center; width: 100%; max-width: 450px; margin: 0 auto;">
-          <label for="device-select" style="font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #e50914; width: 100%; text-align: left; margin-bottom: -5px;">Select Your Device to Check Compatibility</label>
-          <div style="position: relative; width: 100%;">
-            <select id="device-select" style="width: 100%; background: #1e1e1e; border: 1.5px solid rgba(255, 255, 255, 0.1); border-radius: 8px; padding: 14px 20px; color: #ffffff; font-size: 1rem; appearance: none; outline: none; cursor: pointer; transition: all 0.3s ease; font-family: var(--font-sans, sans-serif);">
-              <option value="" disabled selected>-- Choose your device --</option>
-              <option value="smart-tv">Smart TV (Samsung/LG)</option>
-              <option value="firestick">Amazon Firestick</option>
-              <option value="mag-box">MAG Box</option>
-              <option value="android-box">Android Box</option>
-              <option value="apple-tv">Apple TV</option>
-              <option value="ios">iPhone/iPad</option>
-              <option value="pc-mac">PC/Mac</option>
-            </select>
-            <div style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); pointer-events: none; color: #e50914; font-size: 0.8rem;">▼</div>
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+          <!-- Smart TV -->
+          <div style="background: #141414; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 20px 25px; display: flex; flex-direction: column; align-items: center; gap: 10px; min-width: 130px; transition: transform 0.3s ease, border-color 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='rgba(229, 9, 20, 0.5)';" onmouseout="this.style.transform='none'; this.style.borderColor='rgba(255, 255, 255, 0.08)';">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#e50914" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><polyline points="17 2 12 7 7 2"></polyline></svg>
+            <span style="color: #fff; font-weight: 600; font-size: 0.9rem; font-family: var(--font-sans, sans-serif);">Smart TV</span>
           </div>
-          
-          <button id="check-compat-btn" style="background: #e50914; color: #ffffff; border: none; border-radius: 8px; padding: 14px 30px; font-size: 1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; cursor: pointer; width: 100%; box-shadow: 0 4px 15px rgba(229, 9, 20, 0.3); transition: all 0.3s ease; font-family: var(--font-sans, sans-serif);">
-            Check Compatibility
-          </button>
-        </div>
-
-        <div id="compat-result-box" style="margin-top: 25px; padding: 15px; border-radius: 8px; background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.2); display: none; transition: all 0.4s ease;">
-          <p style="color: #10b981; font-weight: 600; font-size: 0.95rem; margin: 0; line-height: 1.4; display: flex; align-items: center; justify-content: center; gap: 8px;">
-            <span>✓ Optimized! RedStream™ is 100% compatible with your device. Setup takes less than 10 minutes.</span>
-          </p>
+          <!-- Android -->
+          <div style="background: #141414; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 20px 25px; display: flex; flex-direction: column; align-items: center; gap: 10px; min-width: 130px; transition: transform 0.3s ease, border-color 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='rgba(229, 9, 20, 0.5)';" onmouseout="this.style.transform='none'; this.style.borderColor='rgba(255, 255, 255, 0.08)';">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#e50914" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            <span style="color: #fff; font-weight: 600; font-size: 0.9rem; font-family: var(--font-sans, sans-serif);">Android / iOS</span>
+          </div>
+          <!-- Apple TV -->
+          <div style="background: #141414; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 20px 25px; display: flex; flex-direction: column; align-items: center; gap: 10px; min-width: 130px; transition: transform 0.3s ease, border-color 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='rgba(229, 9, 20, 0.5)';" onmouseout="this.style.transform='none'; this.style.borderColor='rgba(255, 255, 255, 0.08)';">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#e50914" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            <span style="color: #fff; font-weight: 600; font-size: 0.9rem; font-family: var(--font-sans, sans-serif);">Apple TV</span>
+          </div>
+          <!-- Firestick -->
+          <div style="background: #141414; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 20px 25px; display: flex; flex-direction: column; align-items: center; gap: 10px; min-width: 130px; transition: transform 0.3s ease, border-color 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='rgba(229, 9, 20, 0.5)';" onmouseout="this.style.transform='none'; this.style.borderColor='rgba(255, 255, 255, 0.08)';">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#e50914" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2" ry="2"></rect><circle cx="12" cy="14" r="4"></circle><line x1="12" y1="6" x2="12.01" y2="6"></line></svg>
+            <span style="color: #fff; font-weight: 600; font-size: 0.9rem; font-family: var(--font-sans, sans-serif);">Firestick</span>
+          </div>
+          <!-- MAG Box -->
+          <div style="background: #141414; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 20px 25px; display: flex; flex-direction: column; align-items: center; gap: 10px; min-width: 130px; transition: transform 0.3s ease, border-color 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='rgba(229, 9, 20, 0.5)';" onmouseout="this.style.transform='none'; this.style.borderColor='rgba(255, 255, 255, 0.08)';">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#e50914" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"></rect><path d="M12 12h.01"></path><path d="M17 12h.01"></path><path d="M7 12h.01"></path></svg>
+            <span style="color: #fff; font-weight: 600; font-size: 0.9rem; font-family: var(--font-sans, sans-serif);">MAG / Formuler</span>
+          </div>
+          <!-- PC / Web -->
+          <div style="background: #141414; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 20px 25px; display: flex; flex-direction: column; align-items: center; gap: 10px; min-width: 130px; transition: transform 0.3s ease, border-color 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.borderColor='rgba(229, 9, 20, 0.5)';" onmouseout="this.style.transform='none'; this.style.borderColor='rgba(255, 255, 255, 0.08)';">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#e50914" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+            <span style="color: #fff; font-weight: 600; font-size: 0.9rem; font-family: var(--font-sans, sans-serif);">PC / Web Player</span>
+          </div>
         </div>
       </div>
     </div>

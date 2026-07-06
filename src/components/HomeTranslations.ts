@@ -2,6 +2,14 @@ import { Language } from '../types';
 
 export const homeTranslations: Record<Exclude<Language, 'en'>, Record<string, string>> = {
   ar: {
+    "Supported Devices": "الأجهزة المدعومة",
+    "RedStream™ is fully optimized and 100% compatible with all your favorite smart devices and streaming boxes. Setup takes less than 5 minutes.": "RedStream™ محسن بالكامل ومتوافق بنسبة 100٪ مع جميع أجهزتك الذكية وأجهزة البث المفضلة لديك. يستغرق الإعداد أقل من 5 دقائق.",
+    "Android / iOS": "أندرويد / آي أو إس",
+    "PC / Web Player": "كمبيوتر / متصفح",
+    "Smart TV": "تلفزيون ذكي",
+    
+    "Firestick": "فاير ستيك",
+    "MAG / Formuler": "ماج / فورمولار",
     'Premium 4K IPTV Service 2026': 'خدمة IPTV 4K متميزة 2026',
     'Experience Ultimate TV with': 'عش تجربة التلفزيون الاستثنائية مع',
     'RedStream™ Premium IPTV': 'RedStream™ IPTV متميز',
@@ -99,6 +107,10 @@ export const homeTranslations: Record<Exclude<Language, 'en'>, Record<string, st
     'Hello RedStream, I want to order the 12 Months Premium Plan for 49€.': 'مرحباً RedStream، أريد طلب الباقة الممتازة لمدة 12 شهراً مقابل 49 يورو.',
   },
   es: {
+    "Supported Devices": "Dispositivos Compatibles",
+    "RedStream™ is fully optimized and 100% compatible with all your favorite smart devices and streaming boxes. Setup takes less than 5 minutes.": "RedStream™ está totalmente optimizado y es 100% compatible con todos sus dispositivos inteligentes y cajas de streaming favoritos. La configuración toma menos de 5 minutos.",
+    "Android / iOS": "Android / iOS",
+    "PC / Web Player": "PC / Reproductor Web",
     'Premium 4K IPTV Service 2026': 'Servicio IPTV 4K Premium 2026',
     'Experience Ultimate TV with': 'Vive la Mejor Experiencia de TV con',
     'RedStream™ Premium IPTV': 'RedStream™ IPTV Premium',
@@ -196,6 +208,10 @@ export const homeTranslations: Record<Exclude<Language, 'en'>, Record<string, st
     'Hello RedStream, I want to order the 12 Months Premium Plan for 49€.': 'Hola RedStream, quiero pedir la suscripción de 12 meses por 49€.',
   },
   nl: {
+    "Supported Devices": "Ondersteunde Apparaten",
+    "RedStream™ is fully optimized and 100% compatible with all your favorite smart devices and streaming boxes. Setup takes less than 5 minutes.": "RedStream™ is volledig geoptimaliseerd en 100% compatibel met al uw favoriete slimme apparaten en streamingboxen. Instellen duurt minder dan 5 minuten.",
+    "Android / iOS": "Android / iOS",
+    "PC / Web Player": "PC / Web Player",
     'Premium 4K IPTV Service 2026': 'Premium 4K IPTV Service 2026',
     'Experience Ultimate TV with': 'Ervaar de Ultieme TV-ervaring met',
     'RedStream™ Premium IPTV': 'RedStream™ Premium IPTV',
@@ -293,6 +309,10 @@ export const homeTranslations: Record<Exclude<Language, 'en'>, Record<string, st
     'Hello RedStream, I want to order the 12 Months Premium Plan for 49€.': 'Hallo RedStream, ik wil het 12 Maanden Premium Plan bestellen voor 49€.',
   },
   fr: {
+    "Supported Devices": "Appareils compatibles",
+    "RedStream™ is fully optimized and 100% compatible with all your favorite smart devices and streaming boxes. Setup takes less than 5 minutes.": "RedStream™ est entièrement optimisé et compatible à 100 % avec tous vos appareils intelligents et boîtiers de streaming préférés. L’installation prend moins de 5 minutes.",
+    "Android / iOS": "Android / iOS",
+    "PC / Web Player": "PC / Lecteur Web",
     'Premium 4K IPTV Service 2026': 'Service IPTV 4K Premium 2026',
     'Experience Ultimate TV with': 'Vivez la Télévision Ultime avec',
     'RedStream™ Premium IPTV': 'RedStream™ IPTV Premium',
@@ -324,7 +344,7 @@ export const homeTranslations: Record<Exclude<Language, 'en'>, Record<string, st
     '24/7 Support on WhatsApp': 'Support 24/7 sur WhatsApp',
     'Real human engineers ready to help you with activation, device troubleshooting, and guide installation anytime, day or night.': 
       'De vrais techniciens humains prêts à vous aider pour l’activation, le dépannage de vos appareils et l’installation à tout moment.',
-    'Check Device Compatibility': 'Vérifier la compatibilité de l’appareil',
+    'Check Device Compatibility': 'Vérifier la compatibilité',
     'Ensure your Smart TV, streaming box, or phone is ready for our premium anti-freeze channels before you get started.': 
       'Assurez-vous que votre Smart TV, boîtier de streaming ou téléphone est compatible avec nos chaînes premium avant de commencer.',
     'Select Your Device to Check Compatibility': 'Sélectionnez votre appareil pour vérifier la compatibilité',
@@ -390,6 +410,10 @@ export const homeTranslations: Record<Exclude<Language, 'en'>, Record<string, st
     'Hello RedStream, I want to order the 12 Months Premium Plan for 49€.': 'Bonjour RedStream, je souhaite commander le forfait premium de 12 mois pour 49€.',
   },
   ru: {
+    "Supported Devices": "Поддерживаемые устройства",
+    "RedStream™ is fully optimized and 100% compatible with all your favorite smart devices and streaming boxes. Setup takes less than 5 minutes.": "RedStream™ полностью оптимизирован и на 100% совместим со всеми вашими любимыми смарт-устройствами и приставками. Настройка занимает менее 5 минут.",
+    "Android / iOS": "Android / iOS",
+    "PC / Web Player": "ПК / Веб-плеер",
     'Premium 4K IPTV Service 2026': 'Премиум IPTV 4K Сервис 2026',
     'Experience Ultimate TV with': 'Получите Лучший Опыт ТВ с',
     'RedStream™ Premium IPTV': 'RedStream™ Premium IPTV',
@@ -487,6 +511,10 @@ export const homeTranslations: Record<Exclude<Language, 'en'>, Record<string, st
     'Hello RedStream, I want to order the 12 Months Premium Plan for 49€.': 'Здравствуйте RedStream, я хочу заказать премиум подписку на 12 месяцев за 49€.',
   },
   de: {
+    "Supported Devices": "Unterstützte Geräte",
+    "RedStream™ is fully optimized and 100% compatible with all your favorite smart devices and streaming boxes. Setup takes less than 5 minutes.": "RedStream™ ist vollständig optimiert und 100% kompatibel mit all Ihren bevorzugten Smart-Geräten und Streaming-Boxen. Die Einrichtung dauert weniger als 5 Minuten.",
+    "Android / iOS": "Android / iOS",
+    "PC / Web Player": "PC / Web Player",
     'Premium 4K IPTV Service 2026': 'Premium 4K IPTV Service 2026',
     'Experience Ultimate TV with': 'Erleben Sie das ultimative Fernsehen mit',
     'RedStream™ Premium IPTV': 'RedStream™ Premium IPTV',
