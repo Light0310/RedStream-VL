@@ -240,6 +240,20 @@ export default function FAQSection({ currentLang }: FAQSectionProps) {
           "name": "RedStream™ Premium IPTV Subscription",
           "image": "https://www.red-stream.store/1000148211-iptv-france.webp",
           "description": "Stream over 20,000+ live premium TV channels and 60,000+ blockbuster movies & VOD in stunning Ultra HD 4K with Anti-Freeze 9.0 Technology.",
+          "sku": "REDSTREAM-PREMIUM",
+          "mpn": "RS-PREMIUM-01",
+          "review": {
+            "@type": "Review",
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "author": {
+              "@type": "Person",
+              "name": "Alex M."
+            }
+          },
           "brand": {
             "@type": "Brand",
             "name": "RedStream™"
@@ -263,28 +277,36 @@ export default function FAQSection({ currentLang }: FAQSectionProps) {
                 "name": "24 Hours Trial",
                 "price": "2.00",
                 "priceCurrency": "EUR",
-                "availability": "https://schema.org/InStock"
+                "availability": "https://schema.org/InStock",
+                "priceValidUntil": "2027-12-31",
+                "url": "https://www.red-stream.store/"
               },
               {
                 "@type": "Offer",
                 "name": "1 Month Premium Plan",
                 "price": "12.00",
                 "priceCurrency": "EUR",
-                "availability": "https://schema.org/InStock"
+                "availability": "https://schema.org/InStock",
+                "priceValidUntil": "2027-12-31",
+                "url": "https://www.red-stream.store/"
               },
               {
                 "@type": "Offer",
                 "name": "6 Months Premium Plan",
                 "price": "29.00",
                 "priceCurrency": "EUR",
-                "availability": "https://schema.org/InStock"
+                "availability": "https://schema.org/InStock",
+                "priceValidUntil": "2027-12-31",
+                "url": "https://www.red-stream.store/"
               },
               {
                 "@type": "Offer",
                 "name": "12 Months Premium Plan",
                 "price": "49.00",
                 "priceCurrency": "EUR",
-                "availability": "https://schema.org/InStock"
+                "availability": "https://schema.org/InStock",
+                "priceValidUntil": "2027-12-31",
+                "url": "https://www.red-stream.store/"
               }
             ]
           }
