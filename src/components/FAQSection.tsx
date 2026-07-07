@@ -242,18 +242,6 @@ export default function FAQSection({ currentLang }: FAQSectionProps) {
           "description": "Stream over 20,000+ live premium TV channels and 60,000+ blockbuster movies & VOD in stunning Ultra HD 4K with Anti-Freeze 9.0 Technology.",
           "sku": "REDSTREAM-PREMIUM",
           "mpn": "RS-PREMIUM-01",
-          "review": {
-            "@type": "Review",
-            "reviewRating": {
-              "@type": "Rating",
-              "ratingValue": "5",
-              "bestRating": "5"
-            },
-            "author": {
-              "@type": "Person",
-              "name": "Alex M."
-            }
-          },
           "brand": {
             "@type": "Brand",
             "name": "RedStream™"
